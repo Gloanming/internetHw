@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.together.date.Dao.userDao">
+    <insert id="addUser" parameterType="com.together.date.Vo.registerVo">
+        INSERT INTO usersinformation
+        (userName,userPwd,userID,avatarUrl,userCreditIndex,userSex)
+        VALUES (#{userName},#{userPwd},#{identity},#{avatarUrl},#{userCredit},#{sex})
+    </insert>
+    <select id="selectUserById" resultType="com.together.date.service.entity.user">
+        SELECT * FROM usersinformation
+        WHERE userID=#{userId}
+    </select>
+</mapper>
