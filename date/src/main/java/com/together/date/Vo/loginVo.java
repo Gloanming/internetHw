@@ -12,13 +12,6 @@ public class loginVo {
 
     public String sex; // 性别
 
-    /**
-     * 构造函数
-     * @param openid
-     * @param userName
-     * @param avatarUrl
-     * @param sex
-     */
     public loginVo(String openid, String userName, String avatarUrl,String sex){
         this.identity = openid;
         this.userName = userName;

@@ -11,4 +11,20 @@
         SELECT * FROM usersinformation
         WHERE userID=#{userId}
     </select>
+    <update id="changeUserNameById">
+        UPDATE usersinformation SET userName=#{newName}
+        WHERE userID=#{Id}
+    </update>
+    <update id="changeUserSexById">
+        UPDATE usersinformation SET userSex=#{sex}
+        WHERE userID=#{Id}
+    </update>
+    <update id="changeUserPwdById">
+        UPDATE usersinformation SET userPwd=#{pwd}
+        WHERE userID=#{Id}
+    </update>
+    <update id="changeUserAvatarUrlById">
+        UPDATE usersinformation SET avatarUrl=#{avatarUrl}
+        WHERE userID=#{Id}
+    </update>
 </mapper>
