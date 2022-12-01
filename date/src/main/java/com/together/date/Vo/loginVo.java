@@ -5,17 +5,12 @@ import lombok.Data;
 @Data
 public class loginVo {
     private String identity; // 获取的code
+    public String pwd;
 
-    public String userName; // 用户名
 
-    public String avatarUrl; // 头像地址 (一般应该就是头像的图片)
 
-    public String sex; // 性别
-
-    public loginVo(String openid, String userName, String avatarUrl,String sex){
+    public loginVo(String openid, String pwd){
         this.identity = openid;
-        this.userName = userName;
-        this.avatarUrl = avatarUrl;
-        this.sex = sex;
+        this.pwd = pwd;
     }
 }

@@ -10,13 +10,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RequestMapping("/register")
+@RequestMapping
 @RestController
 public class registerController {
     @Autowired
     private userService UserService;
-    @RequestMapping("/new")
-    public result register(@RequestBody registerVo RegisterVo) {
+    @RequestMapping("/register")
+    public result register(@RequestBody(required = false) registerVo RegisterVo) {
         result Result = UserService.register(RegisterVo);
         return Result;
     }

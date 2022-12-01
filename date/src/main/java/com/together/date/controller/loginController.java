@@ -10,16 +10,17 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RequestMapping("/login")
+@RequestMapping
 @RestController
 
 public class loginController {
     @Autowired
     private userService UserService;
-    @RequestMapping("/into")
-    public result login(@RequestBody loginVo LoginVo) {
+    @RequestMapping("/login")
+    public result login(@RequestBody(required = false) loginVo LoginVo) {
         result Result = UserService.login(LoginVo);
         return Result;
     }
+
 
 }

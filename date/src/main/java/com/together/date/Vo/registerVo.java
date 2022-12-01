@@ -15,7 +15,7 @@ public class registerVo {
         this.userName = userName;
         this.avatarUrl = avatarUrl;
         this.sex = sex;
-        this.userCredit = userCredit;
+        this.userCredit = 100;
         this.userPwd = userPwd;
     }
 }
