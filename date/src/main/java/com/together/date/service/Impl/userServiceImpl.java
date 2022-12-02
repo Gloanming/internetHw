@@ -11,6 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.stereotype.Service;
 
+import java.util.Objects;
+
 @Service
 
 @Slf4j
@@ -28,10 +30,13 @@ public class userServiceImpl implements userService {
         User = UserDao.selectUserById(LoginVo.getIdentity());
         if (User == null){
             //新用户
-            return result.fail("新用户");
+            return result.fail("您是新用户,请先注册后登录", User);
         }else{
-            //老用户
-            return result.success("用户:"+ User.getUserId()+"登录");
+            if (Objects.equals(User.getUserPwd(), LoginVo.pwd))
+                return result.success("用户:"+ User.getUserId()+"登录", User);
+            else {
+                return result.fail("密码错误，请重新输入", User);
+            }
         }
 
     }
@@ -40,12 +45,12 @@ public class userServiceImpl implements userService {
     public result register(registerVo RegisterVo){
         try{
             UserDao.addUser(RegisterVo);
-            return result.success("注册成功");
+            return result.success("注册成功", UserDao.selectUserById(RegisterVo.getIdentity()));
         } catch (DuplicateKeyException e) {
-            e.printStackTrace();
-            return result.fail("用户openid已经存在");
+            return result.fail("用户openid已经存在", UserDao.selectUserById(RegisterVo.getIdentity()));
         }
     }
+
 
 
 }

@@ -22,13 +22,13 @@ public class activityServiceImpl implements activityService {
     public result addActivity(addActivityVo act) {
 //        acDao.addActivity(act.getCreatorId(), act.getActivityId(), act.getActivityType(), act.getHead(), act.getContent(), act.getStartTime(), act.getEndTime(), act.getViewCount(), act.getCapacity(), act.getBookCount(), act.getLikeCount());
         acDao.addActivity(act);
-        return result.success("成功添加活动");
+        return result.success("成功添加活动", acDao.searchByCreatorId(act.getCreatorId()));
     }
 
     @Override
     public result deleteActivity(Activity act) {
         acDao.deleteActivity(act.getActivityId());
-        return result.success("成功删除活动");
+        return result.success("成功删除活动", acDao.searchByCreatorId(act.getCreatorId()));
     }
 
 }

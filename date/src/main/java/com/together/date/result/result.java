@@ -1,5 +1,6 @@
 package com.together.date.result;
 
+import com.together.date.service.entity.user;
 import lombok.Data;
 
 @Data
@@ -9,9 +10,10 @@ public class result {
     private String message;
     private Object data;
 
-    public result(boolean flag, String message){
+    public result(boolean flag, String message, user Uer){
         this.flag = flag;
         this.message = message;
+        data = Uer;
     }
 
     /**
@@ -30,16 +32,17 @@ public class result {
     public static result success(String message,Object data){
         return new result(true,message,data);
     }
-    public static result success(String message) {
-        return new result(true, message);
+    public static result success(String message, user User) {
+        return new result(true, message, User);
     }
+
 
 
     public static result fail(String message, Object data){
         return new result(false,message,data);
     }
 
-    public static result fail (String message){
-        return new result(false,message);
+    public static result fail (String message, user User){
+        return new result(false,message, User);
     }
 }

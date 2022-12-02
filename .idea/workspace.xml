@@ -5,7 +5,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5b4fb4e-c35a-49f8-ac7a-e64a1f53b06b" name="变更" comment="变更：添加关于活动的相关操作">
+      <change afterPath="$PROJECT_DIR$/date/src/main/java/com/together/date/Vo/ChangeNameVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/date/src/main/java/com/together/date/Vo/changePwdVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/date/src/main/java/com/together/date/controller/changeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/date/src/main/java/com/together/date/controller/registerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/date/src/main/java/com/together/date/service/Impl/userChangeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/date/src/main/java/com/together/date/service/userChangeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/date/src/main/resources/createactivitiesTable.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/date/src/main/resources/createuserTable.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/date/src/test/java/com/together/date/ControllerTest/mapper/UserDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8b249c42-eee9-4e49-be2c-d48d4982eb03.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8b249c42-eee9-4e49-be2c-d48d4982eb03.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/src/main/java/com/together/date/Dao/userDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/date/src/main/java/com/together/date/Dao/userDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/src/main/java/com/together/date/Vo/loginVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/date/src/main/java/com/together/date/Vo/loginVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/src/main/java/com/together/date/Vo/registerVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/date/src/main/java/com/together/date/Vo/registerVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/src/main/java/com/together/date/controller/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/date/src/main/java/com/together/date/controller/loginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/src/main/java/com/together/date/result/result.java" beforeDir="false" afterPath="$PROJECT_DIR$/date/src/main/java/com/together/date/result/result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/src/main/java/com/together/date/service/Impl/activityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/date/src/main/java/com/together/date/service/Impl/activityServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/src/main/java/com/together/date/service/Impl/userServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/date/src/main/java/com/together/date/service/Impl/userServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/src/main/java/com/together/date/service/userService.java" beforeDir="false" afterPath="$PROJECT_DIR$/date/src/main/java/com/together/date/service/userService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/src/main/resources/mapper/userDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/date/src/main/resources/mapper/userDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/src/test/java/com/together/date/ControllerTest/mapper/userDaoTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/target/classes/com/together/date/Dao/userDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/target/classes/com/together/date/Vo/loginVo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/target/classes/com/together/date/Vo/registerVo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/target/classes/com/together/date/Vo/result/result.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/target/classes/com/together/date/controller/activityController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/target/classes/com/together/date/controller/loginController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/target/classes/com/together/date/service/Impl/activityServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/target/classes/com/together/date/service/Impl/userServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/target/classes/com/together/date/service/activityService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/target/classes/com/together/date/service/userService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/target/classes/mapper/userDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/date/target/classes/mapper/userDao.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +88,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="JUnit.ActivityDaoTest.searchActivityByLikeTest1">
+  <component name="RunManager" selected="JUnit.UserDaoTest.addUserTest">
     <configuration name="ActivityDaoTest.AddActivityTest2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo" />
       <extension name="coverage">
@@ -84,22 +116,6 @@
       <option name="PACKAGE_NAME" value="com.together.date.ControllerTest.mapper" />
       <option name="MAIN_CLASS_NAME" value="com.together.date.ControllerTest.mapper.ActivityDaoTest" />
       <option name="METHOD_NAME" value="AddActivityTest3" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ActivityDaoTest.searchActivityByCreatorIdTest1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="demo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.together.date.ControllerTest.mapper.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.together.date.ControllerTest.mapper" />
-      <option name="MAIN_CLASS_NAME" value="com.together.date.ControllerTest.mapper.ActivityDaoTest" />
-      <option name="METHOD_NAME" value="searchActivityByCreatorIdTest1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -137,6 +153,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UserDaoTest.addUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.together.date.ControllerTest.mapper.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.together.date.ControllerTest.mapper" />
+      <option name="MAIN_CLASS_NAME" value="com.together.date.ControllerTest.mapper.UserDaoTest" />
+      <option name="METHOD_NAME" value="addUserTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DateApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="demo" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.together.date.DateApplication" />
@@ -146,11 +178,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserDaoTest.addUserTest" />
         <item itemvalue="JUnit.ActivityDaoTest.searchActivityByLikeTest1" />
         <item itemvalue="JUnit.ActivityDaoTest.AddActivityTest3" />
         <item itemvalue="JUnit.ActivityDaoTest.AddActivityTest2" />
         <item itemvalue="JUnit.ActivityDaoTest.searchActivityByTypeTest1" />
-        <item itemvalue="JUnit.ActivityDaoTest.searchActivityByCreatorIdTest1" />
       </list>
     </recent_temporary>
   </component>
@@ -178,7 +210,7 @@
       <workItem from="1669743757446" duration="4720000" />
       <workItem from="1669795789221" duration="643000" />
       <workItem from="1669820227427" duration="52000" />
-      <workItem from="1669989668649" duration="1874000" />
+      <workItem from="1669989668649" duration="4457000" />
     </task>
     <task id="LOCAL-00001" summary="变更：添加关于活动的相关操作">
       <created>1669989820190</created>
@@ -201,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669990259474</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="变更：添加关于活动的相关操作">
+      <created>1669995542606</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1669995542606</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

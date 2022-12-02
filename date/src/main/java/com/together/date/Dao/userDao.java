@@ -9,6 +9,11 @@ import org.springframework.stereotype.Repository;
 @Mapper
 @Repository
 public interface userDao {
-    public void addUser(registerVo RegisterVo) throws DuplicateKeyException;//像数据库中添加用户
-    public user selectUserById(String Identity);
+    void addUser(registerVo RegisterVo) throws DuplicateKeyException;//像数据库中添加用户
+    user selectUserById(String Identity);
+    void changeUserNameById(String newName,String Id);
+    void changeUserSexById(String sex,String Id);
+    void changeUserPwdById(String pwd,String Id);
+    void changeUserAvatarUrlById(String avatarUrl,String Id);
+
 }

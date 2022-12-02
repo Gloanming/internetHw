@@ -10,4 +10,6 @@ public interface userService {
 
     result login(loginVo LoginVo);
     result register(registerVo RegisterVo);
+
+
 }
