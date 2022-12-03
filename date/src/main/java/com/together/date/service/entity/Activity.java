@@ -4,7 +4,7 @@ import lombok.Data;
 
 @Data
 public class Activity {
-    int creatorId; //创建人ID
+    String creatorId; //创建人ID
     int activityId; //活动id
     String activityType; //活动类型
     String head; // 标题

@@ -22,7 +22,7 @@ public interface activityDao {
 
     //查询活动
     public List<Activity> searchByType(String searchType);//根据类型查询
-    public List<Activity> searchByCreatorId(int creatorId);//根据创建人ID查询
+    public List<Activity> searchByCreatorId(String creatorId);//根据创建人ID查询
     public List<Activity> searchByView();//根据浏览量查询
     public List<Activity> searchByLike();//根据点赞数查询
 

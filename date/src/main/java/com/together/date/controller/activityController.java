@@ -34,7 +34,7 @@ public class activityController {
     }
 
     @RequestMapping("/idRetrieve")
-    public List<Activity> activityByCreatorId(@RequestBody int id){
+    public List<Activity> activityByCreatorId(@RequestBody String id){
         return ActivityDao.searchByCreatorId(id);
     }
 

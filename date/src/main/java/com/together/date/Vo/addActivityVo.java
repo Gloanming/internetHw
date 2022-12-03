@@ -4,7 +4,7 @@ import lombok.Data;
 
 @Data
 public class addActivityVo {
-    private int creatorId; //创建人ID
+    private String creatorId; //创建人ID
     private int activityId;
     public String activityType; //活动类型
     public String head; // 标题
@@ -18,7 +18,7 @@ public class addActivityVo {
     public int bookCount;//预约人数
     public int likeCount;//点赞数
 
-    public addActivityVo(int creatorId, int activityId, String activityType, String head, String content, String startTime, String endTime, int viewCount, int capacity, int bookCount, int likeCount) {
+    public addActivityVo(String creatorId, int activityId, String activityType, String head, String content, String startTime, String endTime, int viewCount, int capacity, int bookCount, int likeCount) {
         this.creatorId = creatorId;
         this.activityId = activityId;
         this.activityType = activityType;
