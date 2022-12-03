@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.together.date.Dao.activityDao">
+    <!--namespace根据自己需要创建的的mapper的路径和名称填写-->
+    <!--添加活动-->
+    <insert id="addActivity" parameterType="com.together.date.Vo.addActivityVo">
+        INSERT INTO activities
+        (creatorId, activityType, head, content, activityId, startTime, endTime, viewCount, capacity, bookCount, likeCount)
+        VALUES (#{creatorId}, #{activityType}, #{head}, #{content}, #{activityId}, #{startTime}, #{endTime}, #{viewCount}, #{capacity}, #{bookCount}, #{likeCount})
+    </insert>
+
+    <!--删除活动-->
+    <delete id="deleteActivity">
+        DELETE FROM activities WHERE activityId = #{activityId}
+    </delete>
+
+    <!--根据类型查询活动-->
+    <select id="searchByType" parameterType="String" resultType="com.together.date.service.entity.Activity">
+        SELECT * FROM activities
+        WHERE activityType LIKE '%${searchType}%'
+    </select>
+
+    <!--根据创建人ID查询-->
+    <select id="searchByCreatorId" parameterType="int" resultType="com.together.date.service.entity.Activity">
+        SELECT * FROM activities
+        WHERE creatorId = #{creatorId}
+    </select>
+
+    <!--按点赞量排序，查询活动-->
+    <select id="searchByLike" resultType="com.together.date.service.entity.Activity">
+        SELECT * FROM activities
+        ORDER BY likeCount DESC
+    </select>
+
+    <!--按浏览量排序，查询活动-->
+    <select id="searchByView" resultType="com.together.date.service.entity.Activity">
+        SELECT * FROM activities
+        ORDER BY viewCount DESC
+    </select>
+</mapper>

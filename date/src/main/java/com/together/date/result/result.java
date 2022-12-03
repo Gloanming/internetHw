@@ -37,6 +37,7 @@ public class result {
     }
 
 
+
     public static result fail(String message, Object data){
         return new result(false,message,data);
     }

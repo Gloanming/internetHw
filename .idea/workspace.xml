@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5b4fb4e-c35a-49f8-ac7a-e64a1f53b06b" name="变更" comment="" />
+    <list default="true" id="b5b4fb4e-c35a-49f8-ac7a-e64a1f53b06b" name="变更" comment="最新" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,18 +16,142 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2I7u8N10atLT6LZIJcR0aYlaLDF" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/project/date/date2.0/internetHw&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.editor&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;fe01ce2a7fbac8fafaed7c982a04e229&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
   }
-}]]></component>
+}</component>
+  <component name="RunManager" selected="JUnit.UserDaoTest.addUserTest">
+    <configuration name="ActivityDaoTest.AddActivityTest2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.together.date.ControllerTest.mapper.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.together.date.ControllerTest.mapper" />
+      <option name="MAIN_CLASS_NAME" value="com.together.date.ControllerTest.mapper.ActivityDaoTest" />
+      <option name="METHOD_NAME" value="AddActivityTest2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ActivityDaoTest.AddActivityTest3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.together.date.ControllerTest.mapper.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.together.date.ControllerTest.mapper" />
+      <option name="MAIN_CLASS_NAME" value="com.together.date.ControllerTest.mapper.ActivityDaoTest" />
+      <option name="METHOD_NAME" value="AddActivityTest3" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ActivityDaoTest.searchActivityByLikeTest1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.together.date.ControllerTest.mapper.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.together.date.ControllerTest.mapper" />
+      <option name="MAIN_CLASS_NAME" value="com.together.date.ControllerTest.mapper.ActivityDaoTest" />
+      <option name="METHOD_NAME" value="searchActivityByLikeTest1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ActivityDaoTest.searchActivityByTypeTest1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.together.date.ControllerTest.mapper.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.together.date.ControllerTest.mapper" />
+      <option name="MAIN_CLASS_NAME" value="com.together.date.ControllerTest.mapper.ActivityDaoTest" />
+      <option name="METHOD_NAME" value="searchActivityByTypeTest1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserDaoTest.addUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.together.date.ControllerTest.mapper.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.together.date.ControllerTest.mapper" />
+      <option name="MAIN_CLASS_NAME" value="com.together.date.ControllerTest.mapper.UserDaoTest" />
+      <option name="METHOD_NAME" value="addUserTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DateApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="demo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.together.date.DateApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.UserDaoTest.addUserTest" />
+        <item itemvalue="JUnit.ActivityDaoTest.searchActivityByLikeTest1" />
+        <item itemvalue="JUnit.ActivityDaoTest.AddActivityTest3" />
+        <item itemvalue="JUnit.ActivityDaoTest.AddActivityTest2" />
+        <item itemvalue="JUnit.ActivityDaoTest.searchActivityByTypeTest1" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="默认任务">
@@ -34,10 +161,83 @@
       <option name="presentableId" value="Default" />
       <updated>1669544782622</updated>
       <workItem from="1669544783929" duration="80000" />
+      <workItem from="1669610387060" duration="469000" />
+      <workItem from="1669731013244" duration="166000" />
+      <workItem from="1669731203865" duration="918000" />
+      <workItem from="1669732135568" duration="192000" />
+      <workItem from="1669733913162" duration="1816000" />
+      <workItem from="1669741698174" duration="96000" />
+      <workItem from="1669741804392" duration="72000" />
+      <workItem from="1669741889069" duration="219000" />
+      <workItem from="1669742122156" duration="88000" />
+      <workItem from="1669742233950" duration="480000" />
+      <workItem from="1669742726807" duration="461000" />
+      <workItem from="1669743540750" duration="202000" />
+      <workItem from="1669743757446" duration="4720000" />
+      <workItem from="1669795789221" duration="643000" />
+      <workItem from="1669820227427" duration="52000" />
+      <workItem from="1669989668649" duration="5664000" />
+      <workItem from="1670031484146" duration="605000" />
     </task>
+    <task id="LOCAL-00001" summary="变更：添加关于活动的相关操作">
+      <created>1669989820190</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1669989820190</updated>
+    </task>
+    <task id="LOCAL-00002" summary="变更：添加关于活动的相关操作">
+      <created>1669989949998</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1669989949998</updated>
+    </task>
+    <task id="LOCAL-00003" summary="变更：添加关于活动的相关操作">
+      <created>1669990259474</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1669990259474</updated>
+    </task>
+    <task id="LOCAL-00004" summary="变更：添加关于活动的相关操作">
+      <created>1669995542606</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1669995542606</updated>
+    </task>
+    <task id="LOCAL-00005" summary="最新">
+      <created>1669998260503</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1669998260503</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="变更：添加关于活动的相关操作" />
+    <MESSAGE value="最新" />
+    <option name="LAST_COMMIT_MESSAGE" value="最新" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
