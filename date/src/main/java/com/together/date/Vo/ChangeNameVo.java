@@ -4,10 +4,10 @@ import lombok.Data;
 
 @Data
 public class ChangeNameVo {
-    private String newInform;
+    private String name;
     private String id;
     public ChangeNameVo(String name, String id) {
-        newInform = name;
+        this.name = name;
         this.id = id;
     }
 

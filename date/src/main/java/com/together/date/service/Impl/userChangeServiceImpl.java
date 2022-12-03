@@ -24,6 +24,9 @@ public class userChangeServiceImpl implements userChangeService {
 
     @Override
     public result changeUserName(String newName, String userId) {
+        if (UserDao.selectUserById(userId) == null) {
+            return result.fail("未找到用户",null);
+        }
         if (!Objects.equals(newName, UserDao.selectUserById(userId).getUserName())) {
             UserDao.changeUserNameById(newName, userId);
             return result.success("更改成功", UserDao.selectUserById(userId));
@@ -39,6 +42,9 @@ public class userChangeServiceImpl implements userChangeService {
     }
     @Override
     public result changeUserPwd(String pwd, String userId){
+        if (UserDao.selectUserById(userId) == null) {
+            return result.fail("未找到用户", null);
+        }
         if (!Objects.equals(pwd, UserDao.selectUserById(userId).getUserPwd())) {
             UserDao.changeUserPwdById(pwd, userId);
             return result.success("更改成功,请记住您的新密码", UserDao.selectUserById(userId));

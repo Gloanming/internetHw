@@ -6,8 +6,8 @@ import lombok.Data;
 public class changePwdVo {
     private String newPwd;
     private String id;
-    public changePwdVo(String newPwd, String newId) {
+    public changePwdVo(String newPwd, String id) {
         this.newPwd = newPwd;
-        this.id = newId;
+        this.id = id;
     }
 }
