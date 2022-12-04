@@ -4,7 +4,6 @@ import com.together.date.Dao.userDao;
 import com.together.date.DateApplication;
 import com.together.date.Vo.registerVo;
 import com.together.date.service.entity.user;
-import org.apache.catalina.User;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -48,7 +47,7 @@ public class UserDaoTest {
         User.setAvatarUrl("mjl");
         User.setUserCreditIndex(100);
 
-        User.setSex("man");
+        User.setUserSex("man");
         User.setUserName("ycc");
         UserDao.changeUserPwdById("yccnbm", "211250");
         user Us = UserDao.selectUserById("211250");

@@ -7,7 +7,7 @@ public class user {
     private String userName;
     private String userPwd;
     private String userId;
-    private String sex;
+    public String userSex;
     private String avatarUrl;
     private int userCreditIndex;
 }

@@ -6,6 +6,7 @@ import com.together.date.service.userService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RequestMapping
@@ -15,7 +16,9 @@ public class loginController {
     @Autowired
     private userService UserService;
     @RequestMapping("/login")
-    public result login(@RequestBody(required = false) loginVo LoginVo) {
+    public result login(@RequestParam(required = false, value = "identity") String identity, @RequestParam(required = false) String pwd) {
+
+        loginVo LoginVo = new loginVo(identity, pwd);
         result Result = UserService.login(LoginVo);
         return Result;
     }

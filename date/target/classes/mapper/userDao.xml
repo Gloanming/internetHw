@@ -8,7 +8,7 @@
         VALUES (#{userName},#{userPwd},#{identity},#{avatarUrl},#{userCredit},#{sex})
     </insert>
 
-    <select id="selectUserById" resultType="com.together.date.service.entity.user">
+    <select id="selectUserById" resultType="user">
         SELECT * FROM usersinformation
         WHERE userID=#{userId}
     </select>

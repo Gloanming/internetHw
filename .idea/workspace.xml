@@ -4,7 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5b4fb4e-c35a-49f8-ac7a-e64a1f53b06b" name="变更" comment="最新" />
+    <list default="true" id="b5b4fb4e-c35a-49f8-ac7a-e64a1f53b06b" name="变更" comment="最新">
+      <change afterPath="$PROJECT_DIR$/date/src/main/java/com/together/date/Vo/changeVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/date/src/main/resources/select.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/date/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/date/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/date/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/src/main/java/com/together/date/Vo/registerVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/date/src/main/java/com/together/date/Vo/registerVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/src/main/java/com/together/date/Vo/searchAcByTypeVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/date/src/main/java/com/together/date/Vo/searchAcByTypeVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/src/main/java/com/together/date/controller/changeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/date/src/main/java/com/together/date/controller/changeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/src/main/java/com/together/date/controller/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/date/src/main/java/com/together/date/controller/loginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/src/main/java/com/together/date/controller/registerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/date/src/main/java/com/together/date/controller/registerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/src/main/java/com/together/date/service/Impl/userChangeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/date/src/main/java/com/together/date/service/Impl/userChangeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/src/main/java/com/together/date/service/Impl/userServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/date/src/main/java/com/together/date/service/Impl/userServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/src/main/java/com/together/date/service/entity/user.java" beforeDir="false" afterPath="$PROJECT_DIR$/date/src/main/java/com/together/date/service/entity/user.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/date/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/src/main/resources/mapper/userDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/date/src/main/resources/mapper/userDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/src/test/java/com/together/date/ControllerTest/mapper/UserDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/date/src/test/java/com/together/date/ControllerTest/mapper/UserDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/date/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/target/classes/com/together/date/Dao/activityDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/date/target/classes/com/together/date/Dao/activityDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/target/classes/com/together/date/DateApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/date/target/classes/com/together/date/DateApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/target/classes/com/together/date/Vo/addActivityVo.class" beforeDir="false" afterPath="$PROJECT_DIR$/date/target/classes/com/together/date/Vo/addActivityVo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/target/classes/com/together/date/Vo/searchAcByTypeVo.class" beforeDir="false" afterPath="$PROJECT_DIR$/date/target/classes/com/together/date/Vo/searchAcByTypeVo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/target/classes/com/together/date/service/entity/Activity.class" beforeDir="false" afterPath="$PROJECT_DIR$/date/target/classes/com/together/date/service/entity/Activity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/target/classes/com/together/date/service/entity/user.class" beforeDir="false" afterPath="$PROJECT_DIR$/date/target/classes/com/together/date/service/entity/user.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/target/classes/mapper/userDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/date/target/classes/mapper/userDao.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -178,6 +203,7 @@
       <workItem from="1669820227427" duration="52000" />
       <workItem from="1669989668649" duration="5664000" />
       <workItem from="1670031484146" duration="605000" />
+      <workItem from="1670122432818" duration="4000" />
     </task>
     <task id="LOCAL-00001" summary="变更：添加关于活动的相关操作">
       <created>1669989820190</created>

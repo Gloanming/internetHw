@@ -13,7 +13,6 @@ import org.springframework.stereotype.Service;
 import java.util.Objects;
 
 @Service
-
 @Slf4j
 public class userServiceImpl implements userService {
     @Autowired
@@ -29,11 +28,16 @@ public class userServiceImpl implements userService {
         User = UserDao.selectUserById(LoginVo.getIdentity());
         if (User == null){
             //新用户
+            System.out.println("新用户请先注册后登录");
             return result.fail("您是新用户,请先注册后登录", null);
+
         }else{
-            if (Objects.equals(User.getUserPwd(), LoginVo.pwd))
+            if (Objects.equals(User.getUserPwd(), LoginVo.pwd)) {
+                System.out.println("用户"+ User.getUserId() + "登录");
                 return result.success("用户:"+ User.getUserId()+"登录", User);
+            }
             else {
+                System.out.println("密码错误");
                 return result.fail("密码错误，请重新输入", User);
             }
         }
@@ -43,8 +47,10 @@ public class userServiceImpl implements userService {
     public result register(registerVo RegisterVo){
         try{
             UserDao.addUser(RegisterVo);
+            System.out.println("注册成功");
             return result.success("注册成功", UserDao.selectUserById(RegisterVo.getIdentity()));
         } catch (DuplicateKeyException e) {
+            System.out.println("已存在用户");
             return result.fail("用户openid已经存在", UserDao.selectUserById(RegisterVo.getIdentity()));
         }
     }
