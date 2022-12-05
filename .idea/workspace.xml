@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5b4fb4e-c35a-49f8-ac7a-e64a1f53b06b" name="变更" comment="最新">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/date/src/main/java/com/together/date/controller/activityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/date/src/main/java/com/together/date/controller/activityController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/date/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/date/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/date/src/main/resources/mapper/ActivityDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/date/src/main/resources/mapper/ActivityDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/date/src/test/java/com/together/date/ControllerTest/mapper/ActivityDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/date/src/test/java/com/together/date/ControllerTest/mapper/ActivityDaoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/date/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/date/target/classes/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,6 +182,8 @@
       <workItem from="1670031484146" duration="605000" />
       <workItem from="1670122432818" duration="4000" />
       <workItem from="1670239438284" duration="2327000" />
+      <workItem from="1670242473529" duration="647000" />
+      <workItem from="1670243131297" duration="7000" />
     </task>
     <task id="LOCAL-00001" summary="变更：添加关于活动的相关操作">
       <created>1669989820190</created>
