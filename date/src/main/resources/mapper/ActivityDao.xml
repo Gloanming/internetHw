@@ -21,7 +21,7 @@
     </select>
 
     <!--根据创建人ID查询-->
-    <select id="searchByCreatorId" parameterType="int" resultType="com.together.date.service.entity.Activity">
+    <select id="searchByCreatorId" parameterType="string" resultType="com.together.date.service.entity.Activity">
         SELECT * FROM activities
         WHERE creatorId = #{creatorId}
     </select>
