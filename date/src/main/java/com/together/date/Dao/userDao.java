@@ -15,5 +15,5 @@ public interface userDao {
     void changeUserSexById(String sex,String Id);
     void changeUserPwdById(String pwd,String Id);
     void changeUserAvatarUrlById(String avatarUrl,String Id);
-
+    void changeUserCredit(String userId, String command);
 }

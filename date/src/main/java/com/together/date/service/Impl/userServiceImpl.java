@@ -1,6 +1,7 @@
 package com.together.date.service.Impl;
 
 import com.together.date.Dao.userDao;
+import com.together.date.Vo.creditVo;
 import com.together.date.Vo.loginVo;
 import com.together.date.Vo.registerVo;
 import com.together.date.result.result;
@@ -55,6 +56,15 @@ public class userServiceImpl implements userService {
         }
     }
 
-
-
+    @Override
+    public result breakRule(creditVo CreditVo) {
+        User = UserDao.selectUserById(CreditVo.getUserId());
+        UserDao.changeUserCredit(User.getUserId(), CreditVo.getCommand());
+        System.out.println(CreditVo.getUserId() + ": -1 分");
+        return result.success("扣分成功", UserDao.selectUserById(CreditVo.getUserId()));
+    }
+    @Override
+    public result getInformation(user User) {
+        return result.success("成功返回信息", UserDao.selectUserById(User.getUserId()));
+    }
 }

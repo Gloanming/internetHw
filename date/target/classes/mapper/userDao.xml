@@ -28,4 +28,8 @@
         UPDATE usersinformation SET avatarUrl=#{avatarUrl}
         WHERE userID=#{Id}
     </update>
+    <update id="changeUserCredit">
+        UPDATE usersinformation SET userCreditIndex=IF(#{command} = 'increase', userCreditIndex+1, userCreditIndex-1)
+        WHERE userID=#{userId}
+    </update>
 </mapper>
