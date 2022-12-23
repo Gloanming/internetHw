@@ -16,9 +16,7 @@ public class loginController {
     @Autowired
     private userService UserService;
     @RequestMapping("/login")
-    public result login(@RequestParam(required = false, value = "identity") String identity, @RequestParam(required = false) String pwd) {
-
-        loginVo LoginVo = new loginVo(identity, pwd);
+    public result login(@RequestBody(required = false) loginVo LoginVo) {
         result Result = UserService.login(LoginVo);
         return Result;
     }

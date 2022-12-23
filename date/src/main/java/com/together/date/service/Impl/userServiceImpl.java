@@ -59,12 +59,19 @@ public class userServiceImpl implements userService {
     @Override
     public result breakRule(creditVo CreditVo) {
         User = UserDao.selectUserById(CreditVo.getUserId());
+        if (User == null) {
+            return result.fail("找不到用户", null);
+        }
         UserDao.changeUserCredit(User.getUserId(), CreditVo.getCommand());
         System.out.println(CreditVo.getUserId() + ": -1 分");
         return result.success("扣分成功", UserDao.selectUserById(CreditVo.getUserId()));
     }
     @Override
     public result getInformation(user User) {
+        if(User == null) {
+            System.out.println("不存在用户");
+            return result.fail("不存在用户",null);
+        }
         return result.success("成功返回信息", UserDao.selectUserById(User.getUserId()));
     }
 }

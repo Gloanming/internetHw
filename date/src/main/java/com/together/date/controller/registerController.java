@@ -15,8 +15,7 @@ public class registerController {
     @Autowired
     private userService UserService;
     @RequestMapping("/register")
-    public result register(@RequestParam(required = false) String identity, @RequestParam(required = false) String userName, @RequestParam(required = false) String avatarUrl, @RequestParam(required = false) String sex, @RequestParam(required = false) String userPwd) {
-        registerVo RegisterVo = new registerVo(identity, userName, avatarUrl, sex,100, userPwd);
+    public result register(@RequestBody(required = false) registerVo RegisterVo) {
         result Result = UserService.register(RegisterVo);
         return Result;
     }

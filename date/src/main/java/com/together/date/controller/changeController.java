@@ -20,20 +20,18 @@ public class changeController {
 
     user User;
     @RequestMapping("/change/Name")
-    public result changeName(@RequestParam(required = false) String tags, @RequestParam(required = false) String id){
-        changeVo changeNameVo = new changeVo(tags, id);
+    public result changeName(@RequestBody(required = false) changeVo changeNameVo){
+
         result Result = UserChangeService.changeUserName(changeNameVo.getTags(), changeNameVo.getId());
         return Result;
     }
     @RequestMapping("/change/password")
-    public result changePwd(@RequestParam(required = false) String tags, @RequestParam(required = false) String id) {
-        changeVo changePwdVo = new changeVo(tags, id);
+    public result changePwd(@RequestBody(required = false) changeVo changePwdVo){
         result Result = UserChangeService.changeUserPwd(changePwdVo.getTags(), changePwdVo.getId());
         return Result;
     }
     @RequestMapping("/change/sex")
-    public result changeSex(@RequestParam(required = false) String tags, @RequestParam(required = false) String id) {
-        changeVo changeSexVo = new changeVo(tags, id);
+    public result changeSex(@RequestBody(required = false) changeVo changeSexVo) {
         result Result = UserChangeService.changeUserSex(changeSexVo.getTags(), changeSexVo.getId());
         return Result;
     }
