@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5b4fb4e-c35a-49f8-ac7a-e64a1f53b06b" name="变更" comment="最新">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/date/src/main/java/com/together/date/Vo/creditVo.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/date/src/main/java/com/together/date/controller/penaltyController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/8b249c42-eee9-4e49-be2c-d48d4982eb03.xml" beforeDir="false" />
@@ -14,6 +15,9 @@
       <change beforePath="$PROJECT_DIR$/date/src/main/java/com/together/date/service/userService.java" beforeDir="false" afterPath="$PROJECT_DIR$/date/src/main/java/com/together/date/service/userService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/date/src/main/resources/mapper/userDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/date/src/main/resources/mapper/userDao.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/date/target/classes/mapper/userDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/date/target/classes/mapper/userDao.xml" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> 9242b77c652d02f7654f11a2cf90276d5fdcd529
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +67,7 @@
       "mysql"
     ]
   }
+<<<<<<< HEAD
 }]]></component>
   <component name="RunManager" selected="JUnit.UserDaoTest.addUserTest">
     <configuration name="ActivityDaoTest.AddActivityTest2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
@@ -81,6 +86,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+=======
+}</component>
+  <component name="RunManager" selected="JUnit.ActivityDaoTest.searchActivityByCreatorIdTest1">
+>>>>>>> 9242b77c652d02f7654f11a2cf90276d5fdcd529
     <configuration name="ActivityDaoTest.AddActivityTest3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo" />
       <extension name="coverage">
@@ -92,6 +101,38 @@
       <option name="PACKAGE_NAME" value="com.together.date.ControllerTest.mapper" />
       <option name="MAIN_CLASS_NAME" value="com.together.date.ControllerTest.mapper.ActivityDaoTest" />
       <option name="METHOD_NAME" value="AddActivityTest3" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ActivityDaoTest.deleteActivityTest1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.together.date.ControllerTest.mapper.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.together.date.ControllerTest.mapper" />
+      <option name="MAIN_CLASS_NAME" value="com.together.date.ControllerTest.mapper.ActivityDaoTest" />
+      <option name="METHOD_NAME" value="deleteActivityTest1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ActivityDaoTest.searchActivityByCreatorIdTest1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.together.date.ControllerTest.mapper.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.together.date.ControllerTest.mapper" />
+      <option name="MAIN_CLASS_NAME" value="com.together.date.ControllerTest.mapper.ActivityDaoTest" />
+      <option name="METHOD_NAME" value="searchActivityByCreatorIdTest1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -129,22 +170,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserDaoTest.addUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="demo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.together.date.ControllerTest.mapper.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.together.date.ControllerTest.mapper" />
-      <option name="MAIN_CLASS_NAME" value="com.together.date.ControllerTest.mapper.UserDaoTest" />
-      <option name="METHOD_NAME" value="addUserTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="DateApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="demo" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.together.date.DateApplication" />
@@ -154,11 +179,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserDaoTest.addUserTest" />
-        <item itemvalue="JUnit.ActivityDaoTest.searchActivityByLikeTest1" />
-        <item itemvalue="JUnit.ActivityDaoTest.AddActivityTest3" />
-        <item itemvalue="JUnit.ActivityDaoTest.AddActivityTest2" />
+        <item itemvalue="JUnit.ActivityDaoTest.searchActivityByCreatorIdTest1" />
         <item itemvalue="JUnit.ActivityDaoTest.searchActivityByTypeTest1" />
+        <item itemvalue="JUnit.ActivityDaoTest.AddActivityTest3" />
+        <item itemvalue="JUnit.ActivityDaoTest.deleteActivityTest1" />
+        <item itemvalue="JUnit.ActivityDaoTest.searchActivityByLikeTest1" />
       </list>
     </recent_temporary>
   </component>
@@ -189,7 +214,13 @@
       <workItem from="1669989668649" duration="5664000" />
       <workItem from="1670031484146" duration="605000" />
       <workItem from="1670122432818" duration="4000" />
+<<<<<<< HEAD
       <workItem from="1670856734436" duration="131000" />
+=======
+      <workItem from="1670239438284" duration="2327000" />
+      <workItem from="1670242473529" duration="647000" />
+      <workItem from="1670243131297" duration="7000" />
+>>>>>>> 9242b77c652d02f7654f11a2cf90276d5fdcd529
     </task>
     <task id="LOCAL-00001" summary="变更：添加关于活动的相关操作">
       <created>1669989820190</created>

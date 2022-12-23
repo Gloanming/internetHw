@@ -38,7 +38,7 @@ public class ActivityDaoTest {
 
     @Test
     public void AddActivityTest3() {
-        addActivityVo activityVo = new addActivityVo("1", 3, "学习", "通宵学习", "一起通宵学习","8:00", "18:00", 8, 10, 0, 8);
+        addActivityVo activityVo = new addActivityVo("1", 5, "学习", "通宵学习", "一起通宵学习","8:00", "18:00", 8, 10, 0, 8);
         ActivityDao.addActivity(activityVo);
     }
 

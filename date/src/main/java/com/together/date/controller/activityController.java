@@ -9,6 +9,7 @@ import com.together.date.service.entity.Activity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -24,22 +25,22 @@ public class activityController {
     private activityDao ActivityDao;
 
     @RequestMapping("/addActivity")
-    public result addActivity(@RequestBody addActivityVo activity){
+    public result addActivity(@RequestParam(required = false) addActivityVo activity){
         return ActivityService.addActivity(activity);
     }
 
     @RequestMapping("/delActivity")
-    public result delActivity(@RequestBody Activity activity){
+    public result delActivity(@RequestParam(required = false) Activity activity){
         return ActivityService.deleteActivity(activity);
     }
 
     @RequestMapping("/idRetrieve")
-    public List<Activity> activityByCreatorId(@RequestBody String id){
+    public List<Activity> activityByCreatorId(@RequestParam(required = false) String id){
         return ActivityDao.searchByCreatorId(id);
     }
 
     @RequestMapping("/types")
-    public List<Activity> activityByType(@RequestBody String type){
+    public List<Activity> activityByType(@RequestParam(required = false) String type){
         return ActivityDao.searchByType(type);
     }
 
