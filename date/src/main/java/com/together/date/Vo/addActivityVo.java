@@ -17,8 +17,9 @@ public class addActivityVo {
     public int capacity;//活动最大参与人数
     public int bookCount;//预约人数
     public int likeCount;//点赞数
+    public String activityCoverUrl;
 
-    public addActivityVo(String creatorId, int activityId, String activityType, String head, String content, String startTime, String endTime, int viewCount, int capacity, int bookCount, int likeCount) {
+    public addActivityVo(String creatorId, int activityId, String activityType, String head, String content, String startTime, String endTime, int viewCount, int capacity, int bookCount, int likeCount, String activityCoverUrl) {
         this.creatorId = creatorId;
         this.activityId = activityId;
         this.activityType = activityType;
@@ -30,5 +31,6 @@ public class addActivityVo {
         this.capacity = capacity;
         this.bookCount = bookCount;
         this.likeCount = likeCount;
+        this.activityCoverUrl = activityCoverUrl;
     }
 }

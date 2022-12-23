@@ -17,4 +17,6 @@ public class Activity {
     int capacity;//活动最大参与人数
     int bookCount;//预约人数
     int likeCount;//点赞数
+
+    String activityCoverUrl;
 }
