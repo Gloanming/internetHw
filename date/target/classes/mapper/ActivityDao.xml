@@ -5,8 +5,8 @@
     <!--添加活动-->
     <insert id="addActivity" parameterType="com.together.date.Vo.addActivityVo">
         INSERT INTO activities
-        (creatorId, activityType, head, content, activityId, startTime, endTime, viewCount, capacity, bookCount, likeCount)
-        VALUES (#{creatorId}, #{activityType}, #{head}, #{content}, #{activityId}, #{startTime}, #{endTime}, #{viewCount}, #{capacity}, #{bookCount}, #{likeCount})
+        (creatorId, activityType, head, content, activityId, startTime, endTime, viewCount, capacity, bookCount, likeCount,activityCoverUrl)
+        VALUES (#{creatorId}, #{activityType}, #{head}, #{content}, #{activityId}, #{startTime}, #{endTime}, #{viewCount}, #{capacity}, #{bookCount}, #{likeCount}, #{activityCoverUrl})
     </insert>
 
     <!--删除活动-->

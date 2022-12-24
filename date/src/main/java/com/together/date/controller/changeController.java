@@ -29,6 +29,7 @@ public class changeController {
     public result changePwd(@RequestBody(required = false) changeVo changePwdVo){
         result Result = UserChangeService.changeUserPwd(changePwdVo.getTags(), changePwdVo.getId());
         return Result;
+        
     }
     @RequestMapping("/change/sex")
     public result changeSex(@RequestBody(required = false) changeVo changeSexVo) {
