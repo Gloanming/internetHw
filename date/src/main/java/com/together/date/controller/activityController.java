@@ -25,12 +25,12 @@ public class activityController {
     private activityDao ActivityDao;
 
     @RequestMapping("/addActivity")
-    public result addActivity(@RequestParam(required = false) addActivityVo activity){
+    public result addActivity(@RequestBody addActivityVo activity){
         return ActivityService.addActivity(activity);
     }
 
     @RequestMapping("/delActivity")
-    public result delActivity(@RequestParam(required = false) Activity activity){
+    public result delActivity(@RequestBody Activity activity){
         return ActivityService.deleteActivity(activity);
     }
 
