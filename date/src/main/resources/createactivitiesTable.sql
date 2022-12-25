@@ -10,5 +10,6 @@ create table activities
     capacity int,
     bookCount int,
     likeCount int,
-    activityId int
+    activityId int,
+    activityCoverUrl varchar(2000)
 )
