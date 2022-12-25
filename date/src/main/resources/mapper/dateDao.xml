@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.together.date.Dao.dateDao">
+    <insert id="someoneDate" parameterType="com.together.date.Vo.activity_participantVo">
+        INSERT INTO activity_participant
+        (activityId, userId)
+        VALUES (#{activityId}, #{userId})
+    </insert>
+
+    <select id="getUsers" resultType="java.lang.String">
+        SELECT userId FROM activity_participant
+        WHERE activityId=#{activityId}
+    </select>
+</mapper>

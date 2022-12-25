@@ -1,5 +1,6 @@
 package com.together.date.service;
 
+import com.together.date.Vo.activity_participantVo;
 import com.together.date.Vo.creditVo;
 import com.together.date.Vo.loginVo;
 import com.together.date.Vo.registerVo;
@@ -15,5 +16,7 @@ public interface userService {
     result breakRule(creditVo CreditVo);
 
     result getInformation(user User);
+
+    result date(activity_participantVo Activity_participantVo);
 
 }

@@ -9,4 +9,5 @@ public interface activityService {
 
     result deleteActivity(Activity activity);
 
+    result getUsers(String activityId);
 }

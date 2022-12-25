@@ -5,7 +5,7 @@ import lombok.Data;
 @Data
 public class Activity {
     String creatorId; //创建人ID
-    int activityId; //活动id
+    String activityId; //活动id
     String activityType; //活动类型
     String head; // 标题
     String content; //内容

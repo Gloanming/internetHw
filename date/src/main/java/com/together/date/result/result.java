@@ -42,7 +42,5 @@ public class result {
         return new result(false,message,data);
     }
 
-    public static result fail (String message, user User){
-        return new result(false,message, User);
-    }
+
 }

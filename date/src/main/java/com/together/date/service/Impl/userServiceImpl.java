@@ -1,10 +1,14 @@
 package com.together.date.service.Impl;
 
+import com.together.date.Dao.activityDao;
+import com.together.date.Dao.dateDao;
 import com.together.date.Dao.userDao;
+import com.together.date.Vo.activity_participantVo;
 import com.together.date.Vo.creditVo;
 import com.together.date.Vo.loginVo;
 import com.together.date.Vo.registerVo;
 import com.together.date.result.result;
+import com.together.date.service.entity.Activity;
 import com.together.date.service.entity.user;
 import com.together.date.service.userService;
 import lombok.extern.slf4j.Slf4j;
@@ -19,6 +23,11 @@ public class userServiceImpl implements userService {
     @Autowired
     userDao UserDao;
 
+    @Autowired
+    dateDao DateDao;
+
+    @Autowired
+    activityDao ActivityDao;
     user User;
     @Override
     public result add(user person) {
@@ -73,5 +82,15 @@ public class userServiceImpl implements userService {
             return result.fail("不存在用户",null);
         }
         return result.success("成功返回信息", UserDao.selectUserById(User.getUserId()));
+    }
+    @Override
+    public result date(activity_participantVo Activity_participantVo) {
+        User = UserDao.selectUserById(Activity_participantVo.getUserId());
+        if (User == null) {
+            System.out.println("无此用户");
+            return result.fail("无此用户", null);
+        }
+        DateDao.someoneDate(Activity_participantVo.getActivityId(), Activity_participantVo.getUserId());
+        return result.success("成功预约",Activity_participantVo);
     }
 }
