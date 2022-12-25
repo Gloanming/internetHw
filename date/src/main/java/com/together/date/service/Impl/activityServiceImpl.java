@@ -11,6 +11,10 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+<<<<<<< HEAD
+=======
+import java.util.LinkedList;
+>>>>>>> 86da5eabbe58ad4728b87ce80a1b17fd06271f45
 import java.util.List;
 
 @Service
@@ -45,4 +49,53 @@ public class activityServiceImpl implements activityService {
     }
 
 
+    public result searchByCreatorId(String id) {
+       List<Activity> activities = acDao.searchByCreatorId(id);
+       if (activities == null) {
+           return result.fail("找不到该用户创建的活动", (Object) null);
+       }
+       return result.success("成功找到该用户创建的活动", activities);
+    }
+
+    public result searchByType(String type) {
+        List<Activity> activities = acDao.searchByType(type);
+        if (activities == null) {
+            return result.fail("找不到该类型创建的活动", (Object) null);
+        }
+        return result.success("成功找到该类型的活动", activities);
+    }
+
+    public result searchByLike() {
+        List<Activity> activities = acDao.searchByLike();
+        if (activities == null) {
+            return result.fail("找不到活动", (Object) null);
+        }
+        return result.success("成功找到活动", activities);
+    }
+
+    public result searchByView() {
+        List<Activity> activities = acDao.searchByView();
+        if (activities == null) {
+            return result.fail("找不到活动", (Object) null);
+        }
+        return result.success("成功找到活动", activities);
+    }
+
+    public result searchByActivityId(int id) {
+        List<Activity> activities = acDao.searchByActivityId(id);
+        if (activities == null) {
+            return result.fail("找不到活动", (Object) null);
+        }
+        return result.success("成功找到活动", activities);
+    }
+
+    public result addLike(int id) {
+        acDao.addLike(id);
+        return result.success("点赞成功",acDao.searchByActivityId(id));
+    }
+
+    public result cancelLike(int id) {
+        acDao.cancelLike(id);
+        return result.success("取消点赞成功",acDao.searchByActivityId(id));
+    }
 }

@@ -5,19 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5b4fb4e-c35a-49f8-ac7a-e64a1f53b06b" name="变更" comment="最新">
-<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/date/src/main/java/com/together/date/Vo/creditVo.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/date/src/main/java/com/together/date/controller/penaltyController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/8b249c42-eee9-4e49-be2c-d48d4982eb03.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/date/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/date/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/date/src/main/java/com/together/date/Dao/userDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/date/src/main/java/com/together/date/Dao/userDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/date/src/main/java/com/together/date/service/Impl/userServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/date/src/main/java/com/together/date/service/Impl/userServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/date/src/main/java/com/together/date/service/userService.java" beforeDir="false" afterPath="$PROJECT_DIR$/date/src/main/java/com/together/date/service/userService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/date/src/main/resources/mapper/userDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/date/src/main/resources/mapper/userDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/date/target/classes/mapper/userDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/date/target/classes/mapper/userDao.xml" afterDir="false" />
-=======
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
->>>>>>> 9242b77c652d02f7654f11a2cf90276d5fdcd529
+      <change beforePath="$PROJECT_DIR$/date/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/date/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/src/main/java/com/together/date/Dao/activityDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/date/src/main/java/com/together/date/Dao/activityDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/src/main/java/com/together/date/Dao/userDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/date/src/main/java/com/together/date/Dao/userDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/src/main/java/com/together/date/controller/activityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/date/src/main/java/com/together/date/controller/activityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/src/main/java/com/together/date/service/Impl/activityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/date/src/main/java/com/together/date/service/Impl/activityServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/src/main/java/com/together/date/service/Impl/userServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/date/src/main/java/com/together/date/service/Impl/userServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/src/main/java/com/together/date/service/activityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/date/src/main/java/com/together/date/service/activityService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/src/main/java/com/together/date/service/userService.java" beforeDir="false" afterPath="$PROJECT_DIR$/date/src/main/java/com/together/date/service/userService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/src/main/resources/mapper/ActivityDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/date/src/main/resources/mapper/ActivityDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/src/test/java/com/together/date/ControllerTest/mapper/ActivityDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/date/src/test/java/com/together/date/ControllerTest/mapper/ActivityDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/date/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/target/classes/com/together/date/Dao/activityDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/date/target/classes/com/together/date/Dao/activityDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/target/classes/com/together/date/controller/activityController.class" beforeDir="false" afterPath="$PROJECT_DIR$/date/target/classes/com/together/date/controller/activityController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/target/classes/com/together/date/controller/changeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/date/target/classes/com/together/date/controller/changeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/target/classes/com/together/date/service/Impl/activityServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/date/target/classes/com/together/date/service/Impl/activityServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/target/classes/com/together/date/service/activityService.class" beforeDir="false" afterPath="$PROJECT_DIR$/date/target/classes/com/together/date/service/activityService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/target/classes/mapper/ActivityDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/date/target/classes/mapper/ActivityDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/target/classes/mapper/userDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/date/target/classes/mapper/userDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/date/target/test-classes/com/together/date/ControllerTest/mapper/ActivityDaoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/date/target/test-classes/com/together/date/ControllerTest/mapper/ActivityDaoTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,52 +56,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/project/date/date2.0/internetHw",
-    "project.structure.last.edited": "项目",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "configurable.group.editor",
-    "spring.configuration.checksum": "fe01ce2a7fbac8fafaed7c982a04e229"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/project/date/date2.0/internetHw&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;项目&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.editor&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;fe01ce2a7fbac8fafaed7c982a04e229&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-<<<<<<< HEAD
-}]]></component>
-  <component name="RunManager" selected="JUnit.UserDaoTest.addUserTest">
-    <configuration name="ActivityDaoTest.AddActivityTest2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="demo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.together.date.ControllerTest.mapper.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.together.date.ControllerTest.mapper" />
-      <option name="MAIN_CLASS_NAME" value="com.together.date.ControllerTest.mapper.ActivityDaoTest" />
-      <option name="METHOD_NAME" value="AddActivityTest2" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-=======
 }</component>
-  <component name="RunManager" selected="JUnit.ActivityDaoTest.searchActivityByCreatorIdTest1">
->>>>>>> 9242b77c652d02f7654f11a2cf90276d5fdcd529
-    <configuration name="ActivityDaoTest.AddActivityTest3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ActivityDaoTest.cancelTest1">
+    <configuration name="ActivityDaoTest.addLikeTest1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo" />
       <extension name="coverage">
         <pattern>
@@ -100,13 +90,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.together.date.ControllerTest.mapper" />
       <option name="MAIN_CLASS_NAME" value="com.together.date.ControllerTest.mapper.ActivityDaoTest" />
-      <option name="METHOD_NAME" value="AddActivityTest3" />
+      <option name="METHOD_NAME" value="addLikeTest1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ActivityDaoTest.deleteActivityTest1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ActivityDaoTest.cancelTest1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo" />
       <extension name="coverage">
         <pattern>
@@ -116,13 +106,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.together.date.ControllerTest.mapper" />
       <option name="MAIN_CLASS_NAME" value="com.together.date.ControllerTest.mapper.ActivityDaoTest" />
-      <option name="METHOD_NAME" value="deleteActivityTest1" />
+      <option name="METHOD_NAME" value="cancelTest1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ActivityDaoTest.searchActivityByCreatorIdTest1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ActivityDaoTest.searchActivityByActivityIdTest1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo" />
       <extension name="coverage">
         <pattern>
@@ -132,13 +122,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.together.date.ControllerTest.mapper" />
       <option name="MAIN_CLASS_NAME" value="com.together.date.ControllerTest.mapper.ActivityDaoTest" />
-      <option name="METHOD_NAME" value="searchActivityByCreatorIdTest1" />
+      <option name="METHOD_NAME" value="searchActivityByActivityIdTest1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ActivityDaoTest.searchActivityByLikeTest1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserDaoTest.SelectTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo" />
       <extension name="coverage">
         <pattern>
@@ -147,14 +137,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.together.date.ControllerTest.mapper" />
-      <option name="MAIN_CLASS_NAME" value="com.together.date.ControllerTest.mapper.ActivityDaoTest" />
-      <option name="METHOD_NAME" value="searchActivityByLikeTest1" />
+      <option name="MAIN_CLASS_NAME" value="com.together.date.ControllerTest.mapper.UserDaoTest" />
+      <option name="METHOD_NAME" value="SelectTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ActivityDaoTest.searchActivityByTypeTest1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserDaoTest.addUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo" />
       <extension name="coverage">
         <pattern>
@@ -163,8 +153,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.together.date.ControllerTest.mapper" />
-      <option name="MAIN_CLASS_NAME" value="com.together.date.ControllerTest.mapper.ActivityDaoTest" />
-      <option name="METHOD_NAME" value="searchActivityByTypeTest1" />
+      <option name="MAIN_CLASS_NAME" value="com.together.date.ControllerTest.mapper.UserDaoTest" />
+      <option name="METHOD_NAME" value="addUserTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -179,11 +169,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ActivityDaoTest.searchActivityByCreatorIdTest1" />
-        <item itemvalue="JUnit.ActivityDaoTest.searchActivityByTypeTest1" />
-        <item itemvalue="JUnit.ActivityDaoTest.AddActivityTest3" />
-        <item itemvalue="JUnit.ActivityDaoTest.deleteActivityTest1" />
-        <item itemvalue="JUnit.ActivityDaoTest.searchActivityByLikeTest1" />
+        <item itemvalue="JUnit.ActivityDaoTest.cancelTest1" />
+        <item itemvalue="JUnit.ActivityDaoTest.addLikeTest1" />
+        <item itemvalue="JUnit.UserDaoTest.SelectTest" />
+        <item itemvalue="JUnit.UserDaoTest.addUserTest" />
+        <item itemvalue="JUnit.ActivityDaoTest.searchActivityByActivityIdTest1" />
       </list>
     </recent_temporary>
   </component>
@@ -214,13 +204,10 @@
       <workItem from="1669989668649" duration="5664000" />
       <workItem from="1670031484146" duration="605000" />
       <workItem from="1670122432818" duration="4000" />
-<<<<<<< HEAD
       <workItem from="1670856734436" duration="131000" />
-=======
       <workItem from="1670239438284" duration="2327000" />
       <workItem from="1670242473529" duration="647000" />
       <workItem from="1670243131297" duration="7000" />
->>>>>>> 9242b77c652d02f7654f11a2cf90276d5fdcd529
     </task>
     <task id="LOCAL-00001" summary="变更：添加关于活动的相关操作">
       <created>1669989820190</created>

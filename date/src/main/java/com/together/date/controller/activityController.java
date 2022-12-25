@@ -34,24 +34,38 @@ public class activityController {
     }
 
     @RequestMapping("/idRetrieve")
-    public List<Activity> activityByCreatorId(@RequestParam(required = false) String id){
-        return ActivityDao.searchByCreatorId(id);
+    public result activityByCreatorId(@RequestParam(required = false) String id){
+        return ActivityService.searchByCreatorId(id);
     }
 
     @RequestMapping("/types")
-    public List<Activity> activityByType(@RequestParam(required = false) String type){
-        return ActivityDao.searchByType(type);
+    public result activityByType(@RequestParam(required = false) String type){
+        return ActivityService.searchByType(type);
     }
 
     @RequestMapping("/like")
-    public List<Activity> activityByLike(){
-        return ActivityDao.searchByLike();
+    public result activityByLike(){
+        return ActivityService.searchByLike();
     }
 
     @RequestMapping("/view")
-    public List<Activity> activityByView(){
-        return ActivityDao.searchByView();
+    public result activityByView(){
+        return ActivityService.searchByView();
     }
 
+    @RequestMapping("/activityId")
+    public result activityById(@RequestParam(required = false) int id) {
+        return ActivityService.searchByActivityId(id);
+    }
+
+    @RequestMapping("/addLike")
+    public result addLike(@RequestParam(required = false) int id) {
+        return ActivityService.addLike(id);
+    }
+
+    @RequestMapping("/cancelLike")
+    public result cancelLike(@RequestParam(required = false) int id) {
+        return ActivityService.cancelLike(id);
+    }
 }
 

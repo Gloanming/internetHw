@@ -3,5 +3,6 @@
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/date/src/main/resources/createuserTable.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/date/src/main/resources/mapper/ActivityDao.xml" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/date/src/main/resources/mapper/userDao.xml" dialect="MySQL" />
   </component>
 </project>
