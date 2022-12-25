@@ -9,4 +9,17 @@ public interface activityService {
 
     result deleteActivity(Activity activity);
 
+    result searchByCreatorId(String id);
+
+    result searchByType(String type);
+
+    result searchByLike();
+
+    result searchByView();
+
+    result searchByActivityId(int id);
+
+    result addLike(int id);
+
+    result cancelLike(int id);
 }

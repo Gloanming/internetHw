@@ -37,4 +37,17 @@
         SELECT * FROM activities
         ORDER BY viewCount DESC
     </select>
+    <!--根据活动id查询    -->
+    <select id="searchByActivityId" parameterType="int" resultType="com.together.date.service.entity.Activity">
+        SELECT  * from activities
+        WHERE activityId = #{activityId}
+    </select>
+
+    <select id="addLike" parameterType="int">
+        UPDATE activities SET likeCount = likeCount + 1 WHERE activityId = #{id}
+    </select>
+
+    <select id="cancelLike" parameterType="int">
+        UPDATE activities SET likeCount = likeCount - 1 WHERE activityId = #{id}
+    </select>
 </mapper>

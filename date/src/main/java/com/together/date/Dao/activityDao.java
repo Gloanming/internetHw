@@ -25,5 +25,9 @@ public interface activityDao {
     public List<Activity> searchByCreatorId(String creatorId);//根据创建人ID查询
     public List<Activity> searchByView();//根据浏览量查询
     public List<Activity> searchByLike();//根据点赞数查询
+    public List<Activity> searchByActivityId(int id);
 
+    //点赞与取消点赞
+    public void addLike(int id);
+    public void cancelLike(int id);
 }
