@@ -26,41 +26,32 @@ public class ActivityDaoTest {
     activityDao ActivityDao;
     @Test
     public void AddActivityTest1() {
-<<<<<<< HEAD
-        addActivityVo activityVo = new addActivityVo("1", "1", "休闲", "睡觉", "一起睡大觉","8:00", "18:00", 0, 10, 0, 0, "http");
-=======
-        addActivityVo activityVo = new addActivityVo("1", 6, "休闲", "睡觉", "一起睡大觉","8:00", "18:00", 0, 10, 0, 0, "#");
->>>>>>> 86da5eabbe58ad4728b87ce80a1b17fd06271f45
+        addActivityVo activityVo = new addActivityVo("1", "6", "休闲", "睡觉", "一起睡大觉","8:00", "18:00", 0, 10, 0, 0, "http");
+
         ActivityDao.addActivity(activityVo);
     }
 
     @Test
     public void AddActivityTest2() {
-<<<<<<< HEAD
+
         addActivityVo activityVo = new addActivityVo("1", "2", "休闲", "睡觉", "一起睡大觉","8:00", "18:00", 10, 10, 0, 5, "http");
-=======
-        addActivityVo activityVo = new addActivityVo("1", 2, "休闲", "睡觉", "一起睡大觉","8:00", "18:00", 10, 10, 0, 5, "#");
->>>>>>> 86da5eabbe58ad4728b87ce80a1b17fd06271f45
+
         ActivityDao.addActivity(activityVo);
     }
 
     @Test
     public void AddActivityTest3() {
-<<<<<<< HEAD
+
         addActivityVo activityVo = new addActivityVo("1", "5", "学习", "通宵学习", "一起通宵学习","8:00", "18:00", 8, 10, 0, 8, "http");
-=======
-        addActivityVo activityVo = new addActivityVo("1", 5, "学习", "通宵学习", "一起通宵学习","8:00", "18:00", 8, 10, 0, 8, "#");
->>>>>>> 86da5eabbe58ad4728b87ce80a1b17fd06271f45
+
         ActivityDao.addActivity(activityVo);
     }
 
     @Test
     public void deleteActivityTest1(){
-<<<<<<< HEAD
+
         ActivityDao.deleteActivity("1");
-=======
-        ActivityDao.deleteActivity(2);
->>>>>>> 86da5eabbe58ad4728b87ce80a1b17fd06271f45
+
     }
 
     @Test

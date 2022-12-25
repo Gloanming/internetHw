@@ -2,6 +2,7 @@ package com.together.date.service.Impl;
 
 import com.together.date.Dao.activityDao;
 import com.together.date.Dao.dateDao;
+import com.together.date.Dao.userDao;
 import com.together.date.Vo.addActivityVo;
 import com.together.date.result.result;
 import com.together.date.service.activityService;
@@ -11,10 +12,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-<<<<<<< HEAD
-=======
-import java.util.LinkedList;
->>>>>>> 86da5eabbe58ad4728b87ce80a1b17fd06271f45
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -26,6 +24,8 @@ public class activityServiceImpl implements activityService {
 
     @Autowired
     dateDao DateDao;
+    @Autowired
+    userDao UserDao;
     @Override
     public result addActivity(addActivityVo act) {
 //        acDao.addActivity(act.getCreatorId(), act.getActivityId(), act.getActivityType(), act.getHead(), act.getContent(), act.getStartTime(), act.getEndTime(), act.getViewCount(), act.getCapacity(), act.getBookCount(), act.getLikeCount());
@@ -42,10 +42,16 @@ public class activityServiceImpl implements activityService {
     public result getUsers(String activityId) {
 
         List<String> Users = DateDao.getUsers(activityId);
+
         if (Users == null) {
             return result.fail("没有信息",null);
         }
-        return result.success("参与者列表", Users);
+        List<user> userList = new ArrayList<>();
+        for (int i = 0; i < Users.size(); i++) {
+            user userInformation = UserDao.selectUserById(Users.get(i));
+            userList.add(userInformation);
+        }
+        return result.success("参与者列表", userList);
     }
 
 

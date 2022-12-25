@@ -1,1 +1,0 @@
-select userSex FROM usersinformation WHERE userID=#{}
