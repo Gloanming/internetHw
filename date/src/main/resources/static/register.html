@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <script src="dist/js/public.js"></script>
+    <script src="plugins/bootstrap3.3.6/js/jquery/2.0.0/jquery.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(90deg, #b3d7ff, #f2f4f5)
+        }
+
+        .wrapper{
+            margin: 80px;
+        }
+
+        h2{
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 500;
+            margin-top: 0;
+            font-size: 2rem;
+        }
+
+        /*.form-login{*/
+        /*    height: 300px;*/
+        /*    max-width: 200px;*/
+        /*    margin: 0 auto;*/
+        /*    background-color: white;*/
+        /*    padding: 15px 40px 50px;*/
+        /*    border: 1px solid #e5e5e5;*/
+        /*    border-radius: 10px;*/
+        /*}*/
+
+        .form-login{
+            max-width: 380px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 15px 40px 50px;
+            border: 1px solid #e5e5e5;
+            border-radius: 10px;
+        }
+
+        .form-control{
+            margin-bottom: 20px;
+            padding: 10px;
+            font-family: inherit;
+            font-size: inherit;
+            overflow: scroll;
+            display: block;
+            width: 100%;
+            height: calc(1.5em + .75rem + 2px);
+            font-weight: 400;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: .25rem;
+        }
+
+        .form-control:focus {
+            color: #495057;
+            background-color: #fff;
+            border-color: #80bdff;
+            outline: 0;
+            box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25);
+        }
+
+        .sexSelector{
+            margin-bottom: 20px;
+            padding: 10px;
+            width: 100%;
+            position: relative;
+            vertical-align: middle;
+        }
+
+        #man{
+            position: absolute;
+            left: 0px !important;
+            display: inline-block;
+            vertical-align: middle;
+            margin-top: 2px;
+        }
+
+        #woman{
+            position: absolute;
+            right: 94px !important;
+            display: inline-block;
+            vertical-align: middle;
+            margin-top: 2px;
+        }
+
+        .text{
+            position: absolute;
+            font-size: 0.6rem;
+            color: rgb(117,117,117);
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        #mant{
+            left: 14px;
+        }
+
+        #womant{
+            right: 80px;
+        }
+
+        .btn{
+            margin-top: 30px;
+            width: 100%;
+            display: block;
+            padding: 0.5rem 1rem;
+            font-size: 1.25rem;
+            line-height: 1.5;
+            border-radius: 0.3rem;
+            color: white;
+            background-color: #007bff;
+            border-color: #007bff;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        .toLogin{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="form-login">
+
+        <h2>Sign up</h2>
+        <div class="form-group">
+            <div class="alert alert-danger" style="display: none;"></div>
+        </div>
+        <input type="text" class="form-control" name="identity" id="userName" placeholder="YourNickName">
+        <input type="text" class="form-control" name="identity" id="identity" placeholder="Identity">
+        <input type="password" class="form-control" name="pwd" id="password" placeholder="Password">
+        <div class="sexSelector">
+            <input type="radio" name="sex" id="man"><label for="man" class="text" id="mant">男</label>
+            <input type="radio" name="sex" id="woman"><label for="woman" class="text" id="womant">女</label>
+        </div>
+        <button class="btn" onclick="register()">注册</button>
+        <div class="toLogin">Have registered? Please <a href="login.html">log in</a></div>
+    </div>
+</div>
+</body>
+</html>

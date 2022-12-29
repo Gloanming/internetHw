@@ -54,17 +54,17 @@ public class activityController {
     }
 
     @RequestMapping("/activityId")
-    public result activityById(@RequestParam(required = false) int id) {
+    public result activityById(@RequestBody(required = false) String id) {
         return ActivityService.searchByActivityId(id);
     }
 
     @RequestMapping("/addLike")
-    public result addLike(@RequestParam(required = false) int id) {
+    public result addLike(@RequestBody(required = false) String id) {
         return ActivityService.addLike(id);
     }
 
     @RequestMapping("/cancelLike")
-    public result cancelLike(@RequestParam(required = false) int id) {
+    public result cancelLike(@RequestBody(required = false) String id) {
         return ActivityService.cancelLike(id);
     }
 }

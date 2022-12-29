@@ -24,7 +24,7 @@ public class dateController {
         return Result;
     }
     @RequestMapping("/getUsers")
-    public result getUsers(@RequestParam(required = false)String activityId) {
+    public result getUsers(@RequestParam(required = false)int activityId) {
         result Result = ActivityService.getUsers(activityId);
         return Result;
     }

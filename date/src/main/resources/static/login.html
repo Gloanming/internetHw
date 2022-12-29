@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <script src="dist/js/public.js"></script>
+    <script src="plugins/bootstrap3.3.6/js/jquery/2.0.0/jquery.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(90deg, #b3d7ff, #f2f4f5)
+        }
+
+        .wrapper{
+            margin: 80px;
+        }
+
+        h2{
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 500;
+            margin-top: 0;
+            font-size: 2rem;
+        }
+
+        /*.form-login{*/
+        /*    height: 300px;*/
+        /*    max-width: 200px;*/
+        /*    margin: 0 auto;*/
+        /*    background-color: white;*/
+        /*    padding: 15px 40px 50px;*/
+        /*    border: 1px solid #e5e5e5;*/
+        /*    border-radius: 10px;*/
+        /*}*/
+
+        .form-login{
+            max-width: 380px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 15px 40px 50px;
+            border: 1px solid #e5e5e5;
+            border-radius: 10px;
+        }
+
+        .form-control{
+            margin-bottom: 30px;
+            padding: 10px;
+            font-family: inherit;
+            font-size: inherit;
+            overflow: scroll;
+
+            display: block;
+            width: 100%;
+            height: calc(1.5em + .75rem + 2px);
+            font-weight: 400;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: .25rem;
+        }
+
+        .form-control:focus {
+            color: #495057;
+            background-color: #fff;
+            border-color: #80bdff;
+            outline: 0;
+            box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25);
+        }
+
+        .btn{
+            width: 100%;
+            display: block;
+            padding: 0.5rem 1rem;
+            font-size: 1.25rem;
+            line-height: 1.5;
+            border-radius: 0.3rem;
+            color: white;
+            background-color: #007bff;
+            border-color: #007bff;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        .toRegister{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="form-login">
+        <h2>Sign in</h2>
+        <div class="form-group">
+            <div class="alert alert-danger" style="display: none;"></div>
+        </div>
+        <input type="text" class="form-control" name="identity" id="userName" placeholder="Identity">
+        <input type="password" class="form-control" name="pwd" id="password" placeholder="Password">
+        <button class="btn" onclick="login()">登录</button>
+        <div class="toRegister">Not registered yet? Please <a href="register.html">register</a></div>
+    </div>
+</div>
+</body>
+</html>

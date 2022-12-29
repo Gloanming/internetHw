@@ -39,7 +39,7 @@ public class activityServiceImpl implements activityService {
         return result.success("成功删除活动", acDao.searchByCreatorId(act.getCreatorId()));
     }
     @Override
-    public result getUsers(String activityId) {
+    public result getUsers(int activityId) {
 
         List<String> Users = DateDao.getUsers(activityId);
 
@@ -87,21 +87,24 @@ public class activityServiceImpl implements activityService {
         return result.success("成功找到活动", activities);
     }
 
-    public result searchByActivityId(int id) {
-        List<Activity> activities = acDao.searchByActivityId(id);
+    public result searchByActivityId(String id) {
+        int acId = Integer.parseInt(id);
+        List<Activity> activities = acDao.searchByActivityId(acId);
         if (activities == null) {
             return result.fail("找不到活动", (Object) null);
         }
         return result.success("成功找到活动", activities);
     }
 
-    public result addLike(int id) {
-        acDao.addLike(id);
-        return result.success("点赞成功",acDao.searchByActivityId(id));
+    public result addLike(String id) {
+        int acId = Integer.parseInt(id);
+        acDao.addLike(acId);
+        return result.success("点赞成功",acDao.searchByActivityId(acId));
     }
 
-    public result cancelLike(int id) {
-        acDao.cancelLike(id);
-        return result.success("取消点赞成功",acDao.searchByActivityId(id));
+    public result cancelLike(String id) {
+        int acId = Integer.parseInt(id);
+        acDao.cancelLike(acId);
+        return result.success("取消点赞成功",acDao.searchByActivityId(acId));
     }
 }

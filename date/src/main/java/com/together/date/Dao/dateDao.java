@@ -9,6 +9,6 @@ import java.util.List;
 @Mapper
 @Repository
 public interface dateDao {
-    void someoneDate(String activityId, String userId);
-    List<String> getUsers(String activityId);
+    void someoneDate(int activityId, String userId);
+    List<String> getUsers(int activityId);
 }

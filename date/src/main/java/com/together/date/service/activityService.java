@@ -10,7 +10,7 @@ public interface activityService {
     result deleteActivity(Activity activity);
 
 
-    result getUsers(String activityId);
+    result getUsers(int activityId);
 
     result searchByCreatorId(String id);
 
@@ -20,10 +20,10 @@ public interface activityService {
 
     result searchByView();
 
-    result searchByActivityId(int id);
+    result searchByActivityId(String id);
 
-    result addLike(int id);
+    result addLike(String id);
 
-    result cancelLike(int id);
+    result cancelLike(String id);
 
 }

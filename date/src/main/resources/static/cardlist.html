@@ -1,0 +1,993 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>40-ShowCommodity</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="dist/css/page.css">
+
+
+
+
+
+
+<!--    <link rel="stylesheet" href="dist/css/adminlte.css">-->
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="dist/css/header.css">
+    <link rel="stylesheet" href="dist/css/bookcontent.css">
+    <script src="plugins/bootstrap3.3.6/js/jquery/2.0.0/jquery.min.js"></script>
+    <script src="dist/js/swiper.min.js"></script>
+    <link href="plugins/bootstrap3.3.6/css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="dist/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="dist/css/swiper2.css">
+    <link rel="stylesheet" type="text/css" href="dist/css/cardlist.css">
+    <!-- Bootstrap 4 -->
+    <script src="plugins/bootstrap3.3.6/js/bootstrap/3.3.6/bootstrap.min.js"></script>
+
+    <style>
+
+/*.col-md-3{*/
+/*    size: auto;*/
+/*}*/
+/*.product-image{*/
+/*    width: 328px;*/
+/*    height: 230px;*/
+
+/*}*/
+/*.pic-1{*/
+/*    width: 328px;*/
+/*    height: 217px;*/
+
+/*}*/
+
+/*323*/
+/*375*/
+
+        :root{ --main-color: #e74c3c; }
+        .product-grid{
+            font-family: 'Roboto', sans-serif;
+            position: relative;
+        }
+        #backbutton{
+            font-size: 2.5rem;
+
+
+        }
+        .product-grid .product-image{
+            overflow: hidden;
+            position: relative;
+        }
+        .form-group{
+            position: absolute;
+            left: 45%;
+
+            /*text-align: center;*/
+        }
+
+        a:hover {
+            color: #0056b3;
+            text-decoration: none;
+        }
+
+        a:not([href]):not([tabindex]) {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        a:not([href]):not([tabindex]):hover, a:not([href]):not([tabindex]):focus {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        a:not([href]):not([tabindex]):focus {
+            outline: 0;
+        }
+
+
+
+        .product-grid .product-image:before{
+            content: "";
+            background: rgba(0,0,0,0.3);
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            transition: all 0.4s ease-out 0s;
+        }
+        .product-grid:hover .product-image:before{ opacity: 1; }
+        .product-grid .product-image a{ display: block; }
+        .product-grid .product-image img{
+            width: 100%;
+            height: auto;
+        }
+        .price{
+            color: black;
+        }
+        .product-image .pic-1{
+            opacity: 1;
+/*height: 90%!important;*/
+/*            width: 90%!important;*/
+            backface-visibility: hidden;
+            transition: all 0.4s ease-out 0s;
+        }
+        .product-grid:hover .product-image .pic-1{ opacity: 0; }
+        .product-image .cardcontent{
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            backface-visibility: hidden;
+            transform: scale(3);
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: all 0.4s ease-out 0s;
+            text-align: center;
+        }
+        .product-grid:hover .product-image .cardcontent {
+            opacity: 1;
+            transform: scale(1);
+        }
+        .product-trend-label{
+            display: none;
+        }
+        .product-image .product-trend-label,
+        .product-image .product-discount-label{
+            content: "";
+            color: #fff;
+            background-color: #2ecc71;
+            font-size: 12px;
+            line-height: 28px;
+            font-weight: 700;
+            text-align: center;
+            text-transform: uppercase;
+            padding: 0 7px;
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            z-index: 3;
+            border-radius: 50px;
+        }
+        .product-image .product-discount-label{
+            background-color: var(--main-color);
+            left: auto;
+            right: 12px;
+        }
+        .product-grid .social {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            transform: translateX(150%);
+            position: absolute;
+            top: 80%;
+            left: -136%;
+            /*left: 10px;*/
+            z-index: 4;
+        }
+        .product-grid .social li {
+            margin:-15px 20px 12px;
+            opacity: 0;
+            transform: translateY(110%);
+            transition: transform .3s ease-out 0s;
+            float: left;
+        }
+        .product-grid:hover .social li {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .product-grid:hover .social li:nth-child(2){ transition-delay: 0.1s; }
+        .product-grid:hover .social li:nth-child(3){ transition-delay: 0.2s; }
+        .product-grid:hover .social li:nth-child(4){ transition-delay: 0.3s; }
+        .product-grid .social li a {
+            color: #fff;
+            font-size: 22px;
+            transition: all 0.3s;
+        }
+        .product-grid .social li a:hover { color: var(--main-color); }
+        .product-grid .social li a:before,
+        .product-grid .social li a:after{
+            content: attr(data-tip);
+            color: #000;
+            background: #fff;
+            font-size: 14px;
+            padding: 5px 10px;
+            white-space: nowrap;
+            display: none;
+            transform: translateX(-50%);
+            position: absolute;
+            left: 12px;
+            top: -50%;
+            transition: all 0.3s;
+        }
+        .product-grid .social li a:after{
+            content: '';
+            background: linear-gradient(-45deg, #fff 49%, transparent 50%);
+            width: 10px;
+            height: 10px;
+            top: 40%;
+            left: 20px;
+        }
+        .product-grid .social li a:hover:before,
+        .product-grid .social li a:hover:after{
+            display: block;
+        }
+        .product-grid .product-content{ padding: 12px 0; }
+        .product-grid .title{
+            font-size: 15px;
+            font-weight: 400;
+            text-transform: capitalize;
+            margin: 0 0 5px;
+        }
+        .product-grid .title a{ color: #959595; }
+        .product-grid .title a:hover{ color: var(--main-color); }
+        .product-grid .price{
+            color:black;
+            font-size: 14px;
+            font-weight: 400;
+        }
+        .product-grid .price span{
+            color: black;
+            text-decoration: line-through;
+            margin-right: 3px;
+        }
+        .product-grid .price.discount{
+            /*color: var(--main-color); */
+        color: black;
+        }
+        @media only screen and (max-width:990px){
+            .product-grid{ margin-bottom: 30px; }
+        }
+
+        .row{
+            background: transparent;
+        }
+
+
+        .container{
+            background: transparent;
+
+        }
+        .col-md-3{
+            /*background-image: url(dist/img/background-images.jpg);*/
+            /*background: linear-gradient(160deg,#f2f4f5,#b3d7ff);*/
+            background: transparent;
+            border: aqua;
+        }
+        div.item img{
+
+            width:100%;
+            height: 10%;
+        }
+        div#carousel-example-generic{
+            width:38%;
+            height: 10%;
+            margin:0 auto;
+        }
+
+        .showimg{
+            height: 400px;
+            width: 1280px;
+
+
+        }
+    </style>
+</head>
+<!--<body style="background-image: url(dist/img/photo4.jpg)">-->
+<!--<body style="background-image: url(dist/img/background-images.jpg)">-->
+<body style="background: linear-gradient(160deg,#f2f4f5,#b3d7ff)" >
+<!--<body style="background: skyblue">-->
+<div class="cardlistsmall">
+   <ul id="header-ul">
+       <li class="header-li"><a class="header-a" >首页</a></li>
+       <li class="header-li"><a class="header-a team" data-toggle="modal" data-target="#teaminfo">关于</a></li>
+<!--    去掉href可做到效果，但不可以调颜色  -->
+       <li class="header-li"><a class="header-a introduction" data-toggle="modal" data-target="#intro">服务</a></li>
+       <li class="header-li"><a class="header-a"  data-toggle="modal" data-target="#myModal" id="createnewactivity">创建活动</a></li>
+       <li class="header-li"><a class="header-a team" data-toggle="modal" data-target="#teaminfo">团队</a></li>
+       <li class="header-li"><a class="header-a" id="myinfo">个人信息</a></li>
+   </ul>
+    <div class="form-group">
+        <div class="alert alert-info tips" style="display: none;"></div>
+    </div>
+    <div class="form-group">
+        <div class="alert alert-danger" style="display: none;"></div>
+    </div>
+   <br><br><br><br>
+<!--   <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">-->
+<!--       &lt;!&ndash; Indicators &ndash;&gt;-->
+<!--       <ol class="carousel-indicators">-->
+<!--           <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>-->
+<!--           <li data-target="#carousel-example-generic" data-slide-to="1"></li>-->
+<!--           <li data-target="#carousel-example-generic" data-slide-to="2"></li>-->
+<!--           <li data-target="#carousel-example-generic" data-slide-to="3"></li>-->
+<!--       </ol>-->
+
+<!--       &lt;!&ndash; Wrapper for slides &ndash;&gt;-->
+<!--       <div class="carousel-inner" role="listbox">-->
+<!--           <div class="item active">-->
+<!--               <img src="dist/img/photo4.jpg" >-->
+<!--           </div>-->
+<!--           <div class="item">-->
+<!--               <img src="dist/img/photo4.jpg" >-->
+<!--           </div>-->
+<!--           <div class="item">-->
+<!--               <img src="dist/img/photo4.jpg" >-->
+<!--           </div>-->
+
+<!--           <div class="item">-->
+<!--               <img src="dist/img/photo1.png" >-->
+<!--           </div>-->
+
+<!--       </div>-->
+
+<!--       &lt;!&ndash; Controls &ndash;&gt;-->
+<!--       <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">-->
+<!--           <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
+
+<!--       </a>-->
+<!--       <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">-->
+<!--           <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
+
+<!--       </a>-->
+
+<!--   </div>-->
+
+<!--    <section class="pc-banner" style="background: url(dist/img/background-images.jpg) no-repeat center top/100% auto;">-->
+
+    <section class="pc-banner ">
+    <div class="swiper-container">
+            <div class="swiper-wrapper">
+<!--                <div class="swiper-slide"><a href="#"><img src="dist/img/sea.jpg" class="showimg"></a></div>-->
+                <div class="swiper-slide swiper-slide-center none-effect">
+                    <a href="#"><img src="dist/img/view.jpg" class="showimg"></a>
+                </div>
+                <div class="swiper-slide"><a href="#"><img src="dist/img/gym.jpg" class="showimg"></a></div>
+                <div class="swiper-slide"><a href="#"><img src="dist/img/BRPG.png" class="showimg"></a></div>
+                <div class="swiper-slide"><a href="#"><img src="dist/img/NARAKA.png" class="showimg"></a></div>
+                <div class="swiper-slide"><a href="#"><img src="dist/img/PUBG.jpg" class="showimg"></a></div>
+                <div class="swiper-slide"><a href="#"><img src="dist/img/snooker.jpg" class="showimg"></a></div>
+            </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+        <div class="button">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div></div>
+    </section>
+
+
+
+   <br><br><br><br>
+    <div class="container" >
+    <div class="row" >
+        <div class="col-md-3 col-sm-6" >
+            <div class="product-grid">
+                <div class="product-image">
+                    <a href="#">
+                        <img class="pic-1" src="dist/img/view.jpg">
+                        <p class="cardcontent"  id="test11" style="text-align: center;    color: aqua;background-color: black">HERE!HERE!HERE!HERE!HERE!HERE!HERE!HERE!HERE!</p>
+                    </a>
+                    <span class="product-discount-label">热门</span>
+                    <span class="product-trend-label"></span>
+                    <ul class="social">
+                        <li><a class="tip1" href="#" data-tip="点赞"><i class="fa fa-heart thumbup"></i></a>
+                            <p class="likes">77</p>
+                        </li>
+                        <li><a  class="tip2" class="tip2" href="#" data-tip="预约"><i class="fa fa-heartbeat participant"></i></a>
+                            <p class="books">7/7</p>
+
+                        </li>
+                        <li><a class="tip3" href="#" data-tip="分享"><i class="fa fa-random"></i></a></li>
+                        <li><a class="tip4" href="#" data-tip="查看详情" onclick="viedetail(0)"><i class="fa fa-search">
+
+                        </i></a></li>
+                    </ul>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#"></a></h3>
+                    <div class="price" ></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid">
+                <div class="product-image">
+                    <a href="#">
+                        <img class="pic-1" src="dist/img/snooker.jpg">
+                        <p class="cardcontent"  style="text-align:center;color: aqua;background-color: black">HERE! HERE!HERE!HERE!HERE!HERE!</p>
+                    </a>
+                    <span class="product-trend-label"></span>
+                    <span class="product-discount-label">热门</span>
+                    <ul class="social">
+                        <li><a class="tip1" href="#" data-tip="点赞"><i class="fa fa-heart thumbup"></i></a>
+                            <p class="likes">77</p></li>
+                        <li><a  class="tip2" href="#" data-tip="预约"><i class="fa fa-heartbeat participant"></i></a><p class="books">7/7</p></li>
+                        <li><a  class="tip3" href="#" data-tip=""><i class="fa fa-random"></i></a></li>
+                        <li><a   class="tip4" href="#" data-tip="" onclick="viedetail(1)"><i class="fa fa-search"></i></a></li>
+                    </ul>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Women's Button Top</a></h3>
+                    <div class="price discount"><span id="price">$17.00</span> $13.60</div>
+                </div>
+            </div>
+        </div>
+
+           
+           
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid">
+                <div class="product-image">
+                    <a href="#">
+                        <img class="pic-1" src="dist/img/PUBG.jpg">
+                        <p class="cardcontent"  style="text-align: center;color: aqua;background-color: black">HERE! HERE!HERE!HERE!HERE!HERE!</p>
+
+                    </a>
+                    <span class="product-trend-label"></span>
+                    <span class="product-discount-label"></span>
+                    <ul class="social">
+                        <li><a class="tip1" href="#" data-tip="点赞"><i class="fa fa-heart thumbup"></i></a>
+                            <p class="likes">77</p></li>
+                        <li><a  class="tip2" href="#" data-tip="预约"><i class="fa fa-heartbeat participant"></i></a><p class="books">7/7</p></li>
+                        <li><a  class="tip3" href="#" data-tip=""><i class="fa fa-random"></i></a></li>
+                        <li><a   class="tip4" href="#" data-tip="" onclick="viedetail(2)"><i class="fa fa-search"></i></a></li>
+                    </ul>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Women's Button Top</a></h3>
+                    <div class="price discount"><span>$17.00</span> $13.60</div>
+                </div>
+            </div>
+        </div> 
+           
+            
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid">
+                <div class="product-image">
+                    <a href="#">
+                        <img class="pic-1" src="dist/img/NARAKA.png">
+                        <p class="cardcontent"  style="text-align: center;color: aqua;background-color: black">HERE! HERE!HERE!HERE!HERE!HERE!</p>
+                    </a>
+                    <span class="product-trend-label"></span>
+                    <span class="product-discount-label"></span>
+                    <ul class="social">
+                        <li><a class="tip1" href="#" data-tip="点赞"><i class="fa fa-heart thumbup"></i></a>
+                            <p class="likes">77</p></li>
+                        <li><a  class="tip2" href="#" data-tip="预约"><i class="fa fa-heartbeat participant"></i></a><p class="books">7/7</p></li>
+                        <li><a  class="tip3" href="#" data-tip=""><i class="fa fa-random"></i></a></li>
+                        <li><a   class="tip4" href="#" data-tip=""  onclick="viedetail(3)"><i class="fa fa-search"></i></a></li>
+                    </ul>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Women's Button Top</a></h3>
+                    <div class="price discount"><span>$17.00</span> $13.60</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid">
+                <div class="product-image">
+                    <a href="#">
+                        <img class="pic-1" src="dist/img/photo4.jpg">
+                        <p class="cardcontent"  style="text-align: center;color: aqua;background-color: black">HERE! HERE!HERE!HERE!HERE!HERE!</p>
+
+                    </a>
+                    <span class="product-trend-label"></span>
+                    <span class="product-discount-label"></span>
+                    <ul class="social">
+                        <li><a class="tip1" href="#" data-tip="点赞"><i class="fa fa-heart thumbup"></i></a>
+                            <p class="likes">77</p>
+                        </li>
+                        <li><a  class="tip2" href="#" data-tip="预约"><i class="fa fa-heartbeat participant"></i></a><p class="books">7/7</p></li>
+                        <li><a  class="tip3" href="#" data-tip=""><i class="fa fa-random"></i></a></li>
+                        <li><a   class="tip4" href="#" data-tip="" onclick="viedetail(4)"><i class="fa fa-search"></i></a></li>
+                    </ul>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Women's Button Top</a></h3>
+                    <div class="price discount"><span>$17.00</span> $13.60</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid">
+                <div class="product-image">
+                    <a href="#">
+                        <img class="pic-1" src="dist/img/sea.jpg">
+                        <p class="cardcontent"  style="text-align: center;color: aqua;background-color: black">HERE! HERE!HERE!HERE!HERE!HERE!</p>
+                    </a>
+                    <span class="product-trend-label"></span>
+                    <span class="product-discount-label"></span>
+                    <ul class="social">
+                        <li><a class="tip1" href="#" data-tip="点赞"><i class="fa fa-heart thumbup"></i></a>
+                            <p class="likes">77</p></li>
+                        <li><a class="tip2"  href="#" data-tip="预约"><i class="fa fa-heartbeat participant"></i></a><p class="books">7/7</p></li>
+                        <li><a  class="tip3" href="#" data-tip=""><i class="fa fa-random"></i></a></li>
+                        <li><a   class="tip4" href="#" data-tip="" onclick="viedetail(5)"><i class="fa fa-search"></i></a></li>
+                    </ul>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Women's Button Top</a></h3>
+                    <div class="price discount"><span>$17.00</span> $13.60</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid">
+                <div class="product-image">
+                    <a href="#">
+                        <img class="pic-1" src="dist/img/BRPG.png">
+                        <p class="cardcontent"  style="text-align: center;color: aqua;background-color: black">HERE! HERE!HERE!HERE!HERE!HERE!</p>
+
+                    </a>
+                    <span class="product-trend-label"></span>
+                    <span class="product-discount-label"></span>
+                    <ul class="social">
+                        <li><a class="tip1" href="#" data-tip="点赞"><i class="fa fa-heart thumbup"></i></a>
+                            <p class="likes">77</p></li>
+                        <li><a  class="tip2" href="#" data-tip="预约"><i class="fa fa-heartbeat participant"></i></a><p class="books">7/7</p></li>
+                        <li><a  class="tip3" href="#" data-tip=""><i class="fa fa-random"></i></a></li>
+                        <li><a   class="tip4" href="#" data-tip="" onclick="viedetail(6)"><i class="fa fa-search"></i></a></li>
+                    </ul>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Women's Button Top</a></h3>
+                    <div class="price discount"><span>$17.00</span> $13.60</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid">
+                <div class="product-image">
+                    <a href="#">
+                        <img class="pic-1" src="dist/img/street.jpg">
+                        <p class="cardcontent"  style="text-align: center;color: aqua;background-color: black">HERE! HERE!HERE!HERE!HERE!HERE!</p>
+                    </a>
+                    <span class="product-trend-label"></span>
+                    <span class="product-discount-label"></span>
+                    <ul class="social">
+                        <li><a class="tip1" href="#" data-tip="点赞"><i class="fa fa-heart thumbup"></i></a>
+                            <p class="likes" style="color: aqua">770</p></li>
+                        <li><a class="tip2" href="#" data-tip="预约"><i class="fa fa-heartbeat participant"></i></a><p class="books">7/7</p></li>
+                        <li><a  class="tip3" href="#" data-tip=""><i class="fa fa-random"></i></a></li>
+                        <li><a  class="tip4" href="#" data-tip="" onclick="viedetail(7)"><i class="fa fa-search"></i></a></li>
+                    </ul>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Women's Button Top</a></h3>
+                    <div class="price discount"><span>$17.00</span> $13.60</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</div>
+   <nav class="pagination-outer" aria-label="Pagenavigation">
+       <ul class="pagination">
+           <li class="page-item">
+               <a  id="subpage" class="page-link" aria-label="Previous">
+<!--                   <span aria-hidden="true">《</span>-->
+              《
+               </a>
+           </li>
+           <li class="page-item">
+               <a  href="#" id="page1" class="page-link">1</a>
+           </li>
+           <li class="page-item">
+               <a href="#" id="page2" class="page-link">2</a>
+           </li>
+           <li class="page-item">
+               <a href="#" class="page-link">3</a>
+           </li>
+           <li class="page-item">
+               <a  href="#" class="page-link">4</a>
+           </li>
+           <li class="page-item">
+               <a href="#" class="page-link">5</a>
+           </li>
+           <li class="page-item">
+               <a  id="addpage" class="page-link" aria-label="Next">
+<!--                  <span aria-hidden="true">》</span>-->
+               》
+               </a>
+           </li>
+       </ul>
+   </nav>
+   </div>
+<div class="outwrapper">
+<div class="wrapper">
+   <div class="book">
+       <div class="book__cover">
+           <div class="header-image" style="background-image: url(dist/img/photo4.jpg)"><div class="overlay"></div></div>
+           <div class="title-wrap">
+               <h1 class="article-title">Dark House</h1>
+           </div>
+           <p class="book__cover-exerpt">
+
+               Lore ipsum dolor sit amet, consecetur adipisicing elit. Molestiae accusamus, numquam nihil dicta illum, atque deserunt quas quasi nulla, fugiat ipsum voluptas vel laudantium autem. Tempora veniam labore error dolores facere, nostrum suscipit modi, necessitatibus nulla sequi, neque quidem vero. <br><br>
+
+               <span class="social">
+       <i class="fa fa-facebook"></i>
+       <i class="fa fa-twitter"></i>
+       <i class="fa fa-linkedin"></i>
+       <i class="fa fa-instagram"></i>
+      </span>
+
+           </p>
+
+       </div>
+       <div class="book__content">
+           <button id="backbutton">返回</button>
+           <p class="activitytime"><span class="drop-cap">O</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias est incidunt odit ea adipisci animi nihil voluptates iure beatae explicabo asperiores enim ex placeat itaque minus error temporibus voluptate corporis suscipit commodi voluptatibus praesentium molestiae, perspiciatis nulla. Accusantium harum nisi maiores, velit perferendis, nesciunt ad, porro sequi aliquid maxime molestias!</p>
+           <p class="activitycontent">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum accusantium velit expedita, minima sapiente unde magnam dicta. Consequuntur cumque numquam sed deserunt, quidem officia illo blanditiis ipsum, commodi distinctio quam molestias dolore, doloremque corporis? Rem ad recusandae delectus accusamus, harum quisquam perferendis dolor aut consectetur nesciunt atque laborum ab dolores.</p>
+           <p style="display: none">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, neque, magnam. Impedit deleniti ad alias, unde vero quis mollitia, tenetur minima porro, officia iusto quae harum labore nostrum aliquid aut maxime, architecto in reprehenderit. Doloribus pariatur quam fuga sed modi veniam, vel corporis magnam quis eius cumque voluptate, dolore repellendus labore nobis, voluptatibus dicta sapiente doloremque! Enim dicta totam debitis cumque similique, natus, consequatur quidem cum incidunt, sint quos. Ea.</p>
+           <p style="display: none">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident voluptatum possimus dolores nesciunt natus quaerat quas quo quam obcaecati ducimus totam quia sint, et nobis nisi tenetur id aspernatur quibusdam molestiae reprehenderit sed incidunt. Voluptas error necessitatibus sed inventore, quasi facilis, est. Asperiores atque laboriosam inventore quis eos nulla. Fuga neque odit maiores facilis voluptas nemo numquam, eos amet molestias.</p>
+           <p> 参与者： </p>
+           <div class="participants" >
+               <img src="dist/img/user4-128x128.jpg" class="img-circle"><p class="bookeduserid"></p>
+<!--               <img src="dist/img/user1-128x128.jpg" class="img-circle">-->
+<!--               <img src="dist/img/user3-128x128.jpg" class="img-circle">-->
+<!--               <img src="dist/img/user1-128x128.jpg" class="img-circle">-->
+<!--               <img src="dist/img/user3-128x128.jpg" class="img-circle">-->
+<!--               <img src="dist/img/user3-128x128.jpg" class="img-circle">-->
+<!--               <img src="dist/img/user3-128x128.jpg" class="img-circle">-->
+<!--               <img src="dist/img/user1-128x128.jpg" class="img-circle">-->
+<!--               <img src="dist/img/user3-128x128.jpg" class="img-circle">-->
+<!--               <img src="dist/img/user1-128x128.jpg" class="img-circle">-->
+           </div>
+           <div class="participants" >
+               <img src="dist/img/user3-128x128.jpg" class="img-circle"><p class="bookeduserid"></p>
+           </div>
+           <div class="participants" >
+               <img src="dist/img/user1-128x128.jpg" class="img-circle"><p class="bookeduserid"></p>
+           </div>
+           <div class="participants" >
+               <img src="dist/img/user2-160x160.jpg" class="img-circle"><p class="bookeduserid"></p>
+           </div>
+           <div class="participants" >
+               <img src="dist/img/user7-128x128.jpg" class="img-circle"><p class="bookeduserid"></p>
+           </div>
+           <div class="participants" >
+               <img src="dist/img/user8-128x128.jpg" class="img-circle"><p class="bookeduserid"></p>
+           </div>
+           <div class="participants" >
+               <img src="dist/img/user6-128x128.jpg" class="img-circle"><p class="bookeduserid"></p>
+           </div>
+           <div class="participants" >
+               <img src="dist/img/user3-128x128.jpg" class="img-circle"><p class="bookeduserid"></p>
+           </div>
+           <div class="participants" >
+               <img src="dist/img/user3-128x128.jpg" class="img-circle"><p class="bookeduserid"></p>
+           </div>
+           <div class="participants" >
+               <img src="dist/img/user3-128x128.jpg" class="img-circle"><p class="bookeduserid"></p>
+           </div>
+           <div class="participants" >
+               <img src="dist/img/user3-128x128.jpg" class="img-circle"><p class="bookeduserid"></p>
+           </div>
+           <div class="participants" >
+               <img src="dist/img/user3-128x128.jpg" class="img-circle"><p class="bookeduserid"></p>
+           </div>
+           <div class="participants" >
+               <img src="dist/img/user3-128x128.jpg" class="img-circle"><p class="bookeduserid"></p>
+           </div>
+           <div class="participants" >
+               <img src="dist/img/user3-128x128.jpg" class="img-circle"><p class="bookeduserid"></p>
+           </div>
+           <div class="participants" >
+               <img src="dist/img/user3-128x128.jpg" class="img-circle"><p class="bookeduserid"></p>
+           </div>
+           <div class="participants" >
+               <img src="dist/img/user3-128x128.jpg" class="img-circle"><p class="bookeduserid"></p>
+           </div>
+           <div class="participants" >
+               <img src="dist/img/user3-128x128.jpg" class="img-circle"><p class="bookeduserid"></p>
+           </div>
+           <div class="participants" >
+               <img src="dist/img/user3-128x128.jpg" class="img-circle"><p class="bookeduserid"></p>
+           </div>
+           <div class="participants" >
+               <img src="dist/img/user3-128x128.jpg" class="img-circle"><p class="bookeduserid"></p>
+           </div>
+           <div class="participants" >
+               <img src="dist/img/user3-128x128.jpg" class="img-circle"><p class="bookeduserid"></p>
+           </div>
+
+
+
+       </div>
+   </div>
+</div>
+</div>
+
+<div class="modal fade" id="myModal"  data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <button data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">创建活动</h4>
+                <div class="form-group">
+                    <div class="alert alert-info tips" style="display: none;"></div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <p>活动标题</p>
+                <textarea class="form-control" id="newactivityhead"></textarea>
+                <p>活动内容（描述）</p>
+                <textarea class="form-control" id="newactivitycontent"></textarea>
+                <p>活动开始时间</p>
+                <textarea class="form-control" id="newactivitystarttime"></textarea>
+                <p>活动结束时间</p>
+                <textarea class="form-control" id="newactivityendtime"></textarea>
+                <p>活动类型</p>
+                <textarea class="form-control" id="newactivitytype"></textarea>
+                <p>最大参与人数（请输入整数）</p>
+                <textarea class="form-control" id="newactivitycapacity"></textarea>
+            </div>
+            <div class="modal-footer">
+                <button data-dismiss="modal" class="btn btn-default" type="button" id="close">关闭</button>
+                <button  class="btn btn-primary" type="button" id="submitnewactivitybutton" onclick="submitnewacti()">提交</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<div class="modal fade" id="teaminfo"  data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <button data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">团队信息</h4>
+                <div class="form-group">
+                    <div class="alert alert-info tips" style="display: none;"></div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <p>团队成员：<br>牟晋录、余晨辰、焦豪捷、汪天佑、张靖琦</p>
+                <p>后端：牟晋录、余晨辰</p>
+                <p>前端：焦豪捷、汪天佑、张靖琦</p>
+            </div>
+            <div class="modal-footer">
+                <button data-dismiss="modal" class="btn btn-default" type="button" >关闭</button>
+
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<div class="modal fade" id="intro"  data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <button data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">功能介绍</h4>
+                <div class="form-group">
+                    <div class="alert alert-info tips" style="display: none;"></div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <p></p>
+
+            </div>
+            <div class="modal-footer">
+                <button data-dismiss="modal" class="btn btn-default" type="button" >关闭</button>
+
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+
+<!-- /.content-wrapper -->
+
+
+
+</div>
+
+
+</body>
+</html>
+ <script src="dist/js/cardlist.js"></script>
+ <script src="plugins/jquery/jquery.min.js"></script>
+ <script src="dist/js/public.js"></script>
+
+ <script>
+     $("#myinfo").click(function (){
+         window.location.href = "/userinfo.html";
+     })
+     $("a").click(function (){
+         var page=$(this).text();
+
+
+     })
+     $(".participant").click(function (){
+
+
+      participantacti($(this).find(".activityid").html())
+
+     })
+
+     $(".thumbup").click(function (){
+
+
+         thumbupactivity($(this).find(".activityidusetothumb").text())
+
+     })
+
+     $(".fa-search").click(function (){
+
+         var capacity=Number($(this).find(".activitycapacity").text())
+         var booknum=Number($(this).find(".activitybooknum").text())
+         var activid=Number($(this).find(".anotheractivityid").text())
+         $(".participants").each(function (index,element){
+
+             if(index<capacity){
+                 $(element).show()
+                 if(index>=booknum){
+
+$(element).find(".img-circle").attr("src","dist/img/blank.jpg")
+                 }
+
+             }
+             if(index>=capacity)  {
+                 $(element).hide()
+             }
+
+         })
+      getparticipants(activid,booknum)
+
+
+     })
+     function viedetail (myid){
+// alert($(this).html())
+
+         $(".cardlistsmall").hide()
+         $(".outwrapper").show()
+         $(".book").show()
+         $(".book__content").show()
+         $(".book").toggleClass("book--expanded")
+         $(".article-title").text($(""))
+         $(".title").each(function (index,element){
+             if(index==myid){
+                $(".article-title").html( $(element).text())
+             }
+         })
+         $(".product-trend-label").each(function (index,element){
+             if(index==myid){
+                 $(".activitycontent").text( $(element).text())
+             }
+         })
+         $(".cardcontent").each(function (index,element){
+             if(index==myid){
+                 $(".activitytime").html( $(element).html())
+             }
+         })
+
+     }
+
+
+
+     $("#backbutton").click(function (){
+         $(".book").toggleClass("book--expanded")
+
+         $(".cardlistsmall").show()
+
+         $(".book__content").hide()
+         $(".book").hide()
+         $(".outwrapper").hide()
+          // $(".book").toggleClass("book--expanded")
+
+     })
+
+     $(function() {
+         $(".pic-1").attr("src","dist/img/img-10.png");
+         $(".tip3").attr("data-tip","分享")
+         $(".tip4").attr("data-tip","查看")
+
+         var trend1 = parseInt(Math.random() * (8)  );
+         var trend2 = parseInt(Math.random() * (8)  );
+         $(".product-image").each(function (index,element){
+             if(index==trend1||index==trend2){
+                 $(element).find(".product-discount-label").show()
+                 $(element).find(".product-discount-label").html("热门")
+             }else {
+                 $(element).find(".product-discount-label").hide()
+             }
+
+         })
+         $(".thumbup").html("<p class=\"activityidusetothumb\" style=\"display: none\">12</p>")
+         $(".participant").html("<p class=\"activityid\" style=\"display: none\">12</p>")
+$(".fa-search").html("<p class=\"anotheractivityid\" style=\"display: none\">7</p>\n" +
+    "                            <p class=\"activitycapacity\" style=\"display: none\">8</p>\n" +
+    "                            <p class=\"activitybooknum\" style=\"display: none\">6</p>")
+
+         // $("[data-tip]").position("top");
+$(".cardcontent").html("起始时间：2022/12/11"+'<br>'+"结束时间：2022/12/23")
+         var activities=getactivities(Number(0));
+
+
+        })
+
+     window.onload = function() {
+         var swiper = new Swiper('.swiper-container',{
+             autoplay:3000,	//是否自动滚动
+             speed:1000,		//滚动速速
+             autoplayDisableOnInteraction : false,
+             loop:true,
+             centeredSlides : true,
+             slidesPerView:2,//当前选中
+             pagination : '.swiper-pagination',
+             paginationClickable:true,
+             prevButton:'.swiper-button-prev',//左右切换
+             nextButton:'.swiper-button-next',//左右切换
+             onInit:function(swiper){		 //当前选中 状态
+                 swiper.slides[2].className="swiper-slide swiper-slide-active";//第一次打开不要动画
+             },
+             breakpoints: {
+                 668: {
+                     slidesPerView: 1,
+                 }
+             }
+         });
+     }
+$(".page-item").click(function (){
+
+    if(Number($(this).text())>=1){
+
+   getactivities(Number($(this).text())-1)
+        var trend1 = parseInt(Math.random() * (8)  );
+        var trend2 = parseInt(Math.random() * (8)  );
+        $(".product-image").each(function (index,element){
+            if(index==trend1||index==trend2){
+                $(element).find(".product-discount-label").show()
+                $(element).find(".product-discount-label").html("热门")
+            }else {
+                $(element).find(".product-discount-label").hide()
+            }
+
+        })
+
+    }
+
+})
+     $("#addpage").click(function (){
+         $(".page-link").each(function (index,element){
+             if(Number($(element).text())>=1){
+             $(element).text(Number($(element).text())+1)
+             }
+         })
+
+
+     })
+     $("#subpage").click(function (){
+         $(".page-link").each(function (index,element){
+             if(Number($(element).text())==1){
+                 $(".page-link").each(function (index,element){
+                     if(Number($(element).text())>=1){
+                         $(element).text(Number($(element).text())+1)
+                     }
+                 })
+             }
+             if(Number($(element).text())>=1){
+                 $(element).text(Number($(element).text())-1)
+             }
+         })
+
+
+     })
+
+ </script>
+
+
+
+
+

@@ -4,10 +4,10 @@ import lombok.Data;
 
 @Data
 public class activity_participantVo {
-    public String activityId;
+    public int activityId;
     public String userId;
 
-    public activity_participantVo(String activityId, String userId) {
+    public activity_participantVo(int activityId, String userId) {
         this.activityId = activityId;
         this.userId = userId;
     }
